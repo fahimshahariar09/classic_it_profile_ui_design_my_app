@@ -13,10 +13,10 @@ class ProfileScreen extends StatelessWidget {
     ProfileController profileController =Get.put(ProfileController());
     return Scaffold(
       appBar: AppBar(
-        title: Text('Profile'),
+        title: const Text('Profile'),
         actions: [
           IconButton(
-            icon: Icon(Icons.edit),
+            icon: const Icon(Icons.edit),
             onPressed: () {
               // Show a modal bottom sheet to edit profile
               showModalBottomSheet(
@@ -29,14 +29,14 @@ class ProfileScreen extends StatelessWidget {
                       children: [
                         TextField(
                           controller: nameController..text = profileController.name.value,
-                          decoration: InputDecoration(labelText: 'Enter your name'),
+                          decoration: const InputDecoration(labelText: 'Enter your name'),
                         ),
                         TextField(
                           controller: phoneController..text = profileController.phone.value,
-                          decoration: InputDecoration(labelText: 'Enter your phone'),
+                          decoration: const InputDecoration(labelText: 'Enter your phone'),
                           keyboardType: TextInputType.phone,
                         ),
-                        SizedBox(height: 20),
+                        const SizedBox(height: 20),
                         ElevatedButton(
                           onPressed: () {
                             if (nameController.text.isNotEmpty) {
@@ -49,7 +49,7 @@ class ProfileScreen extends StatelessWidget {
                             phoneController.clear();
                             Get.back(); // Close the bottom sheet
                           },
-                          child: Text('Save Changes'),
+                          child: const Text('Save Changes'),
                         ),
                       ],
                     ),
@@ -65,16 +65,16 @@ class ProfileScreen extends StatelessWidget {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            Obx(() => Text('Name: ${profileController.name.value}', style: TextStyle(fontSize: 24))),
-            SizedBox(height: 10),
-            Obx(() => Text('Phone: ${profileController.phone.value}', style: TextStyle(fontSize: 24))),
-            SizedBox(height: 20),
+            Obx(() => Text('Name: ${profileController.name.value}', style: const TextStyle(fontSize: 24))),
+            const SizedBox(height: 10),
+            Obx(() => Text('Phone: ${profileController.phone.value}', style: const TextStyle(fontSize: 24))),
+            const SizedBox(height: 20),
             Center(
               child: ElevatedButton(
                 onPressed: () {
                   // Optionally, you can add more actions here
                 },
-                child: Text('Additional Actions'),
+                child: const Text('Additional Actions'),
               ),
             ),
           ],
