@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:myapp/view/profile.dart';
+import 'package:myapp/view/screen/profile_screen.dart';
 
 void main(){
 
@@ -12,7 +13,7 @@ class MyClass extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: Profile(),
+      home: ProfileScreen(),
     );
   }
 }
