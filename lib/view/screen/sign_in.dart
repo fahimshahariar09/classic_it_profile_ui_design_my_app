@@ -5,6 +5,13 @@ class SignIn extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold();
+    return Scaffold(
+      body: Column(
+        children: [
+          Text("Name"),
+          TextField(),
+        ],
+      ),
+    );
   }
 }
