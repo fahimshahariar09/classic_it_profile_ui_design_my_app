@@ -10,6 +10,8 @@ class SignIn extends StatelessWidget {
         children: [
           Text("Name"),
           TextField(),
+          Text("password"),
+          TextField(),
         ],
       ),
     );
