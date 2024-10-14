@@ -5,6 +5,13 @@ class EmailTextField extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold();
+    return TextFormField(
+      decoration: InputDecoration(
+        focusedBorder: OutlineInputBorder(),
+        border: OutlineInputBorder(),
+        enabledBorder: OutlineInputBorder(),
+        errorBorder: OutlineInputBorder(),
+      ),
+    );
   }
 }
