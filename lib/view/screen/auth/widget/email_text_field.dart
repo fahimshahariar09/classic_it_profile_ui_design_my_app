@@ -23,7 +23,16 @@ class EmailTextField extends StatelessWidget {
             width: 1,
           ),
         ),
+        labelText: "E-mail",
       ),
+      validator: (value) {
+        if (value == '' || value == null) {
+          return "Email can't be empty";
+        } else if (!(value.toString().contains(".") || value.contains("@"))) {
+          return "Please your mail";
+        }
+        return null;
+      },
     );
   }
 }
