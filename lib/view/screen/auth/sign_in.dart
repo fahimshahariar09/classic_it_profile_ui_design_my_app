@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:myapp/view/screen/auth/widget/email_text_field.dart';
+import 'package:myapp/view/screen/auth/widget/password_text_field.dart';
 
 class SignIn extends StatelessWidget {
   const SignIn({super.key});
@@ -8,10 +10,9 @@ class SignIn extends StatelessWidget {
     return Scaffold(
       body: Column(
         children: [
-          Text("Name"),
-          TextField(),
-          Text("password"),
-          TextField(),
+         EmailTextField(),
+          SizedBox(height: 15),
+          PasswordTextField()
         ],
       ),
     );
