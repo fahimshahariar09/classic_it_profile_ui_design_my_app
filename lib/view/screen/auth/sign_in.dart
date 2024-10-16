@@ -8,12 +8,17 @@ class SignIn extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Column(
-        children: [
-         EmailTextField(),
-          SizedBox(height: 15),
-          PasswordTextField()
-        ],
+      body: SafeArea(
+        child: Padding(
+          padding: const EdgeInsets.symmetric(horizontal: 15),
+          child: Column(
+            children: [
+              EmailTextField(),
+              SizedBox(height: 15),
+              PasswordTextField()
+            ],
+          ),
+        ),
       ),
     );
   }
