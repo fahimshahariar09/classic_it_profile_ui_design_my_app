@@ -9,7 +9,27 @@ class SignInController extends GetxController {
   RxBool isLoading = true.obs;
 
   signinFun() async {
+    isLoading.value = true;
     bool status = await SignInService.signinService(
         email: emailController.text, password: passwordController.text);
+    isLoading.value = false;
+    if (status) {
+      return;
+    }
   }
+
+  @override
+  void onInit() {
+    emailController.text = "fahim@gnail.com";
+    passwordController.text = "12345678";
+    super.onInit();
+  }
+
+  @override
+  void dispose() {
+    emailController.dispose();
+    passwordController.dispose();
+    super.dispose();
+  }
+
 }
