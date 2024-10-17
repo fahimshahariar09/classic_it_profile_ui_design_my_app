@@ -1,11 +1,14 @@
 import 'package:flutter/material.dart';
 
 class ConPasswordTextField extends StatelessWidget {
-  const ConPasswordTextField({super.key});
+  const ConPasswordTextField({super.key, required this.conpasswordController});
+
+  final TextEditingController conpasswordController;
 
   @override
   Widget build(BuildContext context) {
     return TextFormField(
+      controller: conpasswordController,
       decoration: InputDecoration(
           focusedBorder: OutlineInputBorder(
             borderRadius: BorderRadius.circular(10),
