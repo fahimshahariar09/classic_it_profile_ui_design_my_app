@@ -20,7 +20,7 @@ class SignInController extends GetxController {
 
   @override
   void onInit() {
-    emailController.text = "fahim@gnail.com";
+    emailController.text = "fahim@gmail.com";
     passwordController.text = "12345678";
     super.onInit();
   }
