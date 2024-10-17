@@ -31,5 +31,4 @@ class SignInController extends GetxController {
     passwordController.dispose();
     super.dispose();
   }
-
 }
