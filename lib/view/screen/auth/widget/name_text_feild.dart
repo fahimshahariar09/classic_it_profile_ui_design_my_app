@@ -1,14 +1,14 @@
 import 'package:flutter/material.dart';
 
-class PhoneTextFeild extends StatelessWidget {
-  const PhoneTextFeild({super.key, required this.phoneController});
+class NameTextFeild extends StatelessWidget {
+  const NameTextFeild({super.key, required this.nameController});
 
-  final TextEditingController phoneController;
+  final TextEditingController nameController;
 
   @override
   Widget build(BuildContext context) {
     return TextFormField(
-      controller: phoneController,
+      controller: nameController,
       decoration: InputDecoration(
         focusedBorder: OutlineInputBorder(
           borderRadius: BorderRadius.circular(10),
