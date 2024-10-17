@@ -15,19 +15,32 @@ class SignIn extends StatelessWidget {
       body: SafeArea(
         child: Padding(
           padding: const EdgeInsets.symmetric(horizontal: 15),
-          child: Column(
-            children: [
-              SizedBox(height: 20),
-              EmailTextField(
-                emailController: signInController.emailController,
-              ),
-              SizedBox(height: 15),
-              PasswordTextField(
-                passwordController: signInController.passwordController,
-              ),
-              SizedBox(height: 20),
-              CommonButton(buttonName: "buttonName", onTap: () {})
-            ],
+          child: Form(
+            key: signInController.formKey,
+            child: Column(
+              children: [
+                SizedBox(height: 20),
+                EmailTextField(
+                  emailController: signInController.emailController,
+                ),
+                SizedBox(height: 15),
+                PasswordTextField(
+                  passwordController: signInController.passwordController,
+                ),
+                SizedBox(height: 20),
+                Obx(() => signInController.isLoading.isTrue
+                    ? CommonButton(
+                        buttonName: "Sign In",
+                        onTap: () {
+                          if (!signInController.formKey.currentState!
+                              .validate()) {
+                            return;
+                          }
+                          signInController.signinFun();
+                        })
+                    : CircularProgressIndicator()),
+              ],
+            ),
           ),
         ),
       ),
