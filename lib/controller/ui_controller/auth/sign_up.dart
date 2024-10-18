@@ -10,4 +10,8 @@ class SignUpController extends GetxController{
   TextEditingController passwordController =TextEditingController();
   TextEditingController conpasswordController =TextEditingController();
 
+  signupFun()async{
+    //bool status =
+  }
+
 }
