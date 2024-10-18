@@ -33,4 +33,13 @@ class SignUpController extends GetxController {
     super.onInit();
   }
 
+  @override
+  void dispose() {
+    nameController.dispose();
+    emailController.dispose();
+    passwordController.dispose();
+    conpasswordController.dispose();
+    super.dispose();
+  }
+
 }

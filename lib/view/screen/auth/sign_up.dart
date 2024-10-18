@@ -29,7 +29,12 @@ class SignUp extends StatelessWidget {
             ConPasswordTextField(
                 conpasswordController: signUpController.conpasswordController),
             SizedBox(height: 15),
-            CommonButton(buttonName: "Sign Up", onTap: () {}),
+            CommonButton(buttonName: "Sign Up", onTap: () {
+              if(!signUpController.formKey.currentState!.validate()){
+                return;
+              }
+              signUpController.signupFun();
+            }),
           ],
         ),
       ),
