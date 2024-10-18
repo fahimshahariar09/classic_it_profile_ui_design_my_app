@@ -12,11 +12,25 @@ class SignUpController extends GetxController {
 
   signupFun() async {
     isLoading.value = true;
-    bool status = await SignUpService.signupService();
+    bool status = await SignUpService.signupService(
+        name: nameController.text,
+        email: emailController.text,
+        password: passwordController.text,
+        conpassword: conpasswordController.text);
     isLoading.value = false;
 
     if (status) {
       return;
     }
   }
+
+  @override
+  void onInit() {
+    nameController.text="fahim";
+    emailController.text="fahim@gmail.com";
+    passwordController.text="1234567";
+    conpasswordController.text="1234567";
+    super.onInit();
+  }
+
 }
