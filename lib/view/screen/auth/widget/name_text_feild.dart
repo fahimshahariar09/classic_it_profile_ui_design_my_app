@@ -21,7 +21,7 @@ class NameTextFeild extends StatelessWidget {
         ),
         errorBorder: OutlineInputBorder(
             borderRadius: BorderRadius.circular(10),
-            borderSide: BorderSide(
+            borderSide: const BorderSide(
               color: Colors.red,
               width: 1,
             )),
