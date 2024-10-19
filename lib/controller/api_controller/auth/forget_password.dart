@@ -1,7 +1,7 @@
 import 'dart:developer';
 
 class ForgetService {
-  static Future forgetService() async {
+  static Future forgetService({required String email}) async {
     try {
       await Future.delayed(const Duration(seconds: 3));
       return true;
