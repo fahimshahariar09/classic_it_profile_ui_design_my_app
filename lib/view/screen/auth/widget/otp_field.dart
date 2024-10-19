@@ -1,4 +1,3 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 class OtpField extends StatelessWidget {
@@ -8,11 +7,18 @@ class OtpField extends StatelessWidget {
   Widget build(BuildContext context) {
     return SizedBox(
       height: 50,
-      width: 80,
+      width: 50,
       child: TextField(
         decoration: InputDecoration(
-          focusedBorder: OutlineInputBorder(),
-          enabledBorder: OutlineInputBorder(),
+          focusedBorder: OutlineInputBorder(
+            borderRadius: BorderRadius.circular(10),
+            borderSide: const BorderSide(color: Colors.grey),
+          ),
+          enabledBorder: OutlineInputBorder(
+            borderRadius: BorderRadius.circular(10),
+            borderSide: const BorderSide(color: Colors.grey),
+          ),
+          fillColor: Colors.grey,
         ),
       ),
     );
