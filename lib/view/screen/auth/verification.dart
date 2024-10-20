@@ -6,18 +6,24 @@ class Verification extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      body: Column(
-        children: [
-          Row(
-            children: [
-              OtpField(),
-              OtpField(),
-              OtpField(),
-              OtpField(),
-            ],
-          )
-        ],
+    return const Scaffold(
+      body: SafeArea(
+        child: Column(
+          children: [
+            Row(
+              mainAxisAlignment: MainAxisAlignment.spaceAround,
+              children: [
+                OtpField(),
+                SizedBox(width: 20),
+                OtpField(),
+                SizedBox(width: 20),
+                OtpField(),
+                SizedBox(width: 20),
+                OtpField(),
+              ],
+            )
+          ],
+        ),
       ),
     );
   }
