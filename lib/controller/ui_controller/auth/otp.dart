@@ -9,9 +9,17 @@ class OtpController extends GetxController {
   TextEditingController num3Conroller = TextEditingController();
   RxBool isLoading = true.obs;
 
-  otoFun()async{
-    isLoading.value=true;
-    bool status = await OtpService.otpService();
-  }
+  otoFun() async {
+    isLoading.value = true;
+    bool status = await OtpService.otpService(
+        num: numConroller.text,
+        num1: num1Conroller.text,
+        num2: num2Conroller.text,
+        num3: num3Conroller.text);
+    isLoading.value = false;
 
+    if (status) {
+      return;
+    }
+  }
 }
