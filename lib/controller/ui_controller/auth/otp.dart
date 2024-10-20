@@ -22,4 +22,14 @@ class OtpController extends GetxController {
       return;
     }
   }
+
+  @override
+  void onInit() {
+    numConroller.text = '5';
+    num1Conroller.text = '4';
+    num2Conroller.text = '8';
+    num3Conroller.text = '3';
+    super.onInit();
+  }
+
 }
