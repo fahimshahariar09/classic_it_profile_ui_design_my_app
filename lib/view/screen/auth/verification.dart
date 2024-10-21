@@ -6,11 +6,12 @@ class Verification extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const Scaffold(
+    return  Scaffold(
       body: SafeArea(
         child: Column(
           children: [
             SizedBox(height: 25),
+            Image.asset("asset/images/otp.png"),
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceAround,
               children: [
