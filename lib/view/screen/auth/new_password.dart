@@ -8,11 +8,16 @@ class NewPassword extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    NewPasswordController controller =Get.put(NewPasswordController());
+    NewPasswordController controller = Get.put(NewPasswordController());
     return Scaffold(
       body: Column(
         children: [
+          const SizedBox(height: 30),
           PasswordTextField(passwordController: controller.oldpassword),
+          const SizedBox(height: 15),
+          PasswordTextField(passwordController: controller.newpassword),
+          const SizedBox(height: 15),
+          PasswordTextField(passwordController: controller.samepassword),
         ],
       ),
     );
