@@ -20,4 +20,11 @@ class NewPasswordController extends GetxController {
     }
   }
 
+  @override
+  void onInit() {
+    oldpassword.text="12345678";
+    newpassword.text="12345678";
+    samepassword.text="12345678";
+    super.onInit();
+  }
 }
