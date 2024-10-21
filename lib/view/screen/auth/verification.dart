@@ -11,7 +11,6 @@ class Verification extends StatelessWidget {
         child: Column(
           children: [
             SizedBox(height: 25),
-            Image.asset("asset/images/otp.png"),
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceAround,
               children: [

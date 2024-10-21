@@ -8,11 +8,13 @@ class ForgetPassword extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    ForgetPasswordController forgetController = Get.put(ForgetPasswordController());
+    ForgetPasswordController forgetController =
+        Get.put(ForgetPasswordController());
     return Scaffold(
       body: Column(
         children: [
           const SizedBox(height: 15),
+          Image.asset("asset/images/otp.png"),
           EmailTextField(emailController: forgetController.emailController),
         ],
       ),
