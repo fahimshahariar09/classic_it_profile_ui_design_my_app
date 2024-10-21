@@ -12,6 +12,8 @@ class ForgetPassword extends StatelessWidget {
         Get.put(ForgetPasswordController());
     return Scaffold(
       body: Column(
+        mainAxisAlignment: MainAxisAlignment.center,
+        crossAxisAlignment: CrossAxisAlignment.center,
         children: [
           const SizedBox(height: 15),
           Image.asset("asset/images/otp.png"),
