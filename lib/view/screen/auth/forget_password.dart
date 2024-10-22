@@ -17,6 +17,7 @@ class ForgetPassword extends StatelessWidget {
         children: [
           const SizedBox(height: 15),
           Image.asset("asset/images/otp.png"),
+          SizedBox(height: 15),
           EmailTextField(emailController: forgetController.emailController),
         ],
       ),
