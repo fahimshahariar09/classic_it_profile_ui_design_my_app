@@ -36,7 +36,20 @@ class Verification extends StatelessWidget {
                   SizedBox(width: 20),
                   OtpField(),
                 ],
-              )
+              ),SizedBox(height: 15),
+              const Row(
+                crossAxisAlignment: CrossAxisAlignment.center,
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  CommonText(
+                    titel: "Don't receive code? ",
+                    fColor: Colors.grey,
+                  ),
+                  CommonText(
+                    titel: "Re-send",
+                  ),
+                ],
+              ),
             ],
           ),
         ),
