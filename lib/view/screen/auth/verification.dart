@@ -46,7 +46,7 @@ class Verification extends StatelessWidget {
                     fColor: Colors.grey,
                   ),
                   CommonText(
-                    titel: "Re-send",
+                    titel: "Re-send",fColor: Colors.black,
                   ),
                 ],
               ),
