@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:myapp/controller/ui_controller/auth/forget_password.dart';
+import 'package:myapp/view/common_widget/common_text.dart';
 import 'package:myapp/view/screen/auth/widget/email_text_field.dart';
 
 class ForgetPassword extends StatelessWidget {
@@ -18,6 +19,22 @@ class ForgetPassword extends StatelessWidget {
           const SizedBox(height: 15),
           Image.asset("asset/images/otp.png"),
           SizedBox(height: 15),
+          const SizedBox(height: 10),
+          const Row(
+            children: [
+              CommonText(
+                titel: "Forget Password?",
+                fWeight: FontWeight.w600,
+                fSize: 18,
+              ),
+            ],
+          ),
+          const SizedBox(height: 10),
+          const Text(
+              "Don’t worry ! It happens. Please enter the phone number we will send the OTP in this phone number."),
+          const SizedBox(
+            height: 20,
+          ),
           EmailTextField(emailController: forgetController.emailController),
         ],
       ),
