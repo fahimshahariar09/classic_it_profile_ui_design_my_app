@@ -12,31 +12,36 @@ class ForgetPassword extends StatelessWidget {
     ForgetPasswordController forgetController =
         Get.put(ForgetPasswordController());
     return Scaffold(
-      body: Column(
-        mainAxisAlignment: MainAxisAlignment.center,
-        crossAxisAlignment: CrossAxisAlignment.center,
-        children: [
-          const SizedBox(height: 15),
-          Image.asset("asset/images/otp.png"),
-          const SizedBox(height: 15),
-          const SizedBox(height: 10),
-          const Row(
+      body: SafeArea(
+        child: Padding(
+          padding: const EdgeInsets.symmetric(horizontal: 15),
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            crossAxisAlignment: CrossAxisAlignment.center,
             children: [
-              CommonText(
-                titel: "Forget Password?",
-                fWeight: FontWeight.w600,
-                fSize: 18,
+              const SizedBox(height: 15),
+              Image.asset("asset/images/otp.png"),
+              const SizedBox(height: 15),
+              const SizedBox(height: 10),
+              const Row(
+                children: [
+                  CommonText(
+                    titel: "Forget Password?",
+                    fWeight: FontWeight.w600,
+                    fSize: 18,
+                  ),
+                ],
               ),
+              const SizedBox(height: 10),
+              const Text(
+                  "Don’t worry ! It happens. Please enter the phone number we will send the OTP in this phone number."),
+              const SizedBox(
+                height: 20,
+              ),
+              EmailTextField(emailController: forgetController.emailController),
             ],
           ),
-          const SizedBox(height: 10),
-          const Text(
-              "Don’t worry ! It happens. Please enter the phone number we will send the OTP in this phone number."),
-          const SizedBox(
-            height: 20,
-          ),
-          EmailTextField(emailController: forgetController.emailController),
-        ],
+        ),
       ),
     );
   }
