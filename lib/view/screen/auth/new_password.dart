@@ -11,19 +11,23 @@ class NewPassword extends StatelessWidget {
     NewPasswordController controller = Get.put(NewPasswordController());
     return Scaffold(
       body: SafeArea(
-        child: Column(
-          children: [
-            const Text(
-              "Your new password must be different from previous used passwords.",
-              style: TextStyle(fontSize: 16, fontWeight: FontWeight.w400),
-            ),
-            const SizedBox(height: 30),
-            PasswordTextField(passwordController: controller.oldpassword),
-            const SizedBox(height: 15),
-            PasswordTextField(passwordController: controller.newpassword),
-            const SizedBox(height: 15),
-            PasswordTextField(passwordController: controller.samepassword),
-          ],
+        child: Padding(
+          padding: const EdgeInsets.symmetric(horizontal: 15),
+          child: Column(
+            children: [
+              SizedBox(height: 15),
+              const Text(
+                "Your new password must be different from previous used passwords.",
+                style: TextStyle(fontSize: 16, fontWeight: FontWeight.w400),
+              ),
+              const SizedBox(height: 30),
+              PasswordTextField(passwordController: controller.oldpassword),
+              const SizedBox(height: 15),
+              PasswordTextField(passwordController: controller.newpassword),
+              const SizedBox(height: 15),
+              PasswordTextField(passwordController: controller.samepassword),
+            ],
+          ),
         ),
       ),
     );

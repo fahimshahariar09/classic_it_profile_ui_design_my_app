@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:myapp/view/screen/auth/forget_password.dart';
 import 'package:myapp/view/screen/auth/new_password.dart';
+import 'package:myapp/view/screen/auth/verification.dart';
 
 void main(){
 
@@ -13,7 +14,7 @@ class MyClass extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: NewPassword(),
+      home: Verification(),
     );
   }
 }
