@@ -12,6 +12,10 @@ class NewPassword extends StatelessWidget {
     return Scaffold(
       body: Column(
         children: [
+          const Text(
+            "Your new password must be different from previous used passwords.",
+            style: TextStyle(fontSize: 16, fontWeight: FontWeight.w400),
+          ),
           const SizedBox(height: 30),
           PasswordTextField(passwordController: controller.oldpassword),
           const SizedBox(height: 15),
