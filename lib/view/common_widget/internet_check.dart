@@ -9,6 +9,8 @@ class InternetCheck extends StatelessWidget {
       body: Column(
         children: [
 TextField(),
+TextField(),
+TextField(),
         ],
       ),
     );
