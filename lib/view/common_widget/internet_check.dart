@@ -8,7 +8,7 @@ class InternetCheck extends StatelessWidget {
     return Scaffold(
       body: Column(
         children: [
-
+TextField(),
         ],
       ),
     );

@@ -5,6 +5,6 @@ class CommonIcon extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Icon(Icons.arrow_back);
+    return const Icon(Icons.arrow_back);
   }
 }
