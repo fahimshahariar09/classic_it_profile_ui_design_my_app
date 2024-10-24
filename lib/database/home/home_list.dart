@@ -6,7 +6,12 @@ class HomeList {
         "name":"",
         "price":"",
         "id":""
-      }
+      },{
+        "image": "",
+        "name":"",
+        "price":"",
+        "id":""
+      },
     ]
   };
 }
