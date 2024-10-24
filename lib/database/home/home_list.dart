@@ -4,6 +4,7 @@ class HomeList {
       {"image": "", "name": "", "price": "", "id": ""},
       {"image": "", "name": "", "price": "", "id": ""},
       {"image": "", "name": "", "price": "", "id": ""},
+      {"image": "", "name": "", "price": "", "id": ""},
     ]
   };
 }
