@@ -13,7 +13,8 @@ class Payment extends StatelessWidget {
       body: SafeArea(
         child: Column(
           children: [
-
+            Text("Payment"),
+            Image.asset("name"),
           ],
         ),
       ),
