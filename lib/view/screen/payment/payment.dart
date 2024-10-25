@@ -14,7 +14,7 @@ class Payment extends StatelessWidget {
         child: Column(
           children: [
             Text("Payment"),
-            Image.asset("asset/card/payment.png"),
+            Image.asset("asset/card/payment.png",color: Colors.black,),
           ],
         ),
       ),

@@ -1,13 +1,10 @@
 import 'package:flutter/material.dart';
-import 'package:myapp/view/screen/auth/forget_password.dart';
-import 'package:myapp/view/screen/auth/new_password.dart';
-import 'package:myapp/view/screen/auth/verification.dart';
 import 'package:myapp/view/screen/payment/payment.dart';
 
-void main(){
-
+void main() {
   runApp(const MyClass());
 }
+
 class MyClass extends StatelessWidget {
   const MyClass({super.key});
 
