@@ -38,6 +38,7 @@ dependencies:
   get: ^4.6.6
   flutter_timer_countdown: ^1.0.7
   fluttertoast:
+  flutter_sslcommerz:
 
 dev_dependencies:
   flutter_test:
