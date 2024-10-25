@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:myapp/view/screen/payment/payment.dart';
+import 'package:myapp/view/screen/payment/ssl_commerz.dart';
 
 void main() {
   runApp(const MyClass());

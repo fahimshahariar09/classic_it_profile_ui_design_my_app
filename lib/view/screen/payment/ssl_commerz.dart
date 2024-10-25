@@ -7,14 +7,16 @@ class Payment extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text("Payment"),
+        title: Text("Ssl Commerz"),
         centerTitle: true,
       ),
-      body: SafeArea(
+      body: Center(
         child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            Text("Payment"),
-            Image.asset("asset/card/payment.png",color: Colors.black,),
+            ElevatedButton(onPressed: (){
+              debugPrint("dfghj");
+            }, child: Text("PAY NOW"))
           ],
         ),
       ),
