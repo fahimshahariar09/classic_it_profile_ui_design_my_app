@@ -10,6 +10,13 @@ class Payment extends StatelessWidget {
         title: const Text("Payment"),
         centerTitle: true,
       ),
+      body: SafeArea(
+        child: Column(
+          children: [
+
+          ],
+        ),
+      ),
     );
   }
 }
