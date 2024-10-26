@@ -14,7 +14,7 @@ class MyClass extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       theme: AppTheme().lightTheme,
-      home: Payment(),
+      home: const Payment(),
     );
   }
 }
