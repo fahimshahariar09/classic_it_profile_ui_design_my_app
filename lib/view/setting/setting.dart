@@ -18,11 +18,14 @@ class Setting extends StatelessWidget {
           child: Column(
             children: [
               Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
-                  Text("ligth & night"),
+                  Text("ligth & night",style: TextStyle(fontSize: 16,fontWeight: FontWeight.w500),),
                   Switch(
                       value: settingController.isLightTheme.value,
-                      onChanged: (value) {})
+                      onChanged: (value) {
+                        settingController.changeTheme();
+                      })
                 ],
               )
             ],
