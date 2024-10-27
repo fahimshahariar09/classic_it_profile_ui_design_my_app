@@ -2,6 +2,8 @@
 import 'package:flutter/material.dart';
 
 class AppTheme{
+
+  // ligth theme
   ThemeData lightTheme = ThemeData(
     appBarTheme: const AppBarTheme(
       backgroundColor: Colors.blue,
@@ -13,6 +15,8 @@ class AppTheme{
       )
     )
   );
+
+  //darkTheme
   ThemeData darkTheme = ThemeData(
     appBarTheme: const AppBarTheme(
       centerTitle: true,
