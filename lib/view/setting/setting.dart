@@ -19,7 +19,8 @@ class Setting extends StatelessWidget {
             children: [
               Row(
                 children: [
-
+                  Text("ligth & night"),
+                  Switch(value: (value), onChanged:(){})
                 ],
               )
             ],
