@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:myapp/utlis/theme.dart';
 import 'package:myapp/view/screen/payment/ssl_commerz.dart';
+import 'package:myapp/view/setting/setting.dart';
 
 void main() {
   runApp(const MyClass());
@@ -14,7 +15,7 @@ class MyClass extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       theme: AppTheme().lightTheme,
-      home: const Payment(),
+      home: Setting(),
     );
   }
 }

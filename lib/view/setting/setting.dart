@@ -7,7 +7,7 @@ class Setting extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    SettingController settingController =Get.put(SettingController());
+    SettingController settingController = Get.put(SettingController());
     return Scaffold(
       appBar: AppBar(
         title: const Text("Setting"),
@@ -20,7 +20,9 @@ class Setting extends StatelessWidget {
               Row(
                 children: [
                   Text("ligth & night"),
-                  Switch(value: (value), onChanged:(){})
+                  Switch(
+                      value: settingController.isLightTheme.value,
+                      onChanged: (value) {})
                 ],
               )
             ],
