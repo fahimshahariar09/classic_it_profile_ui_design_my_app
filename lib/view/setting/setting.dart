@@ -25,7 +25,7 @@ class Setting extends StatelessWidget {
                       value: settingController.isLightTheme.value,
                       onChanged: (value) {
                         settingController.changeTheme();
-                      })
+                      },activeColor: Colors.white,autofocus: true,)
                 ],
               )
             ],
