@@ -47,12 +47,12 @@ class AppLanguage extends Translations {
               "आपका नया पासवर्ड पूर्व में उपयोग किए गए पासवर्ड से अलग होना चाहिए।",
           "Forget Password?": "क्या आप पासवर्ड भूल गए हैं?",
           "Don’t worry ! It happens. Please enter the phone number we will send the OTP in this phone number.":
-              "কিছু ভাববেন না! এটা হয়ে যায়। দয়া করে ফোন নম্বর লিখুন, আমরা এই নম্বরে OTP পাঠাবো",
-          "OTP VERIFICATION": "OTP যাচাইকরণ",
+              "चिंता मत करें! ऐसा होता है। कृपया फोन नंबर दर्ज करें, हम इस नंबर पर OTP भेजेंगे।",
+          "OTP VERIFICATION": "OTP सत्यापन",
           "Please enter the verification code sent to":
-              "দয়া করে যাচাইকরণ কোডটি প্রবেশ করুন যা পাঠানো হয়েছে",
-          "Don't receive code?": "কোড পাননি",
-          "Re-send": "পুনরায় পাঠান"
+              "कृपया वह सत्यापन कोड दर्ज करें जो भेजा गया है",
+          "Don't receive code?": "कोड प्राप्त नहीं हुआ?",
+          "Re-send": "पुनः भेजें"
         }
       };
 }
