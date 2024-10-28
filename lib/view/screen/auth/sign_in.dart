@@ -40,7 +40,7 @@ class SignIn extends StatelessWidget {
                 const SizedBox(height: 20),
                 Obx(() => signInController.isLoading.isTrue
                     ? CommonButton(
-                        buttonName: "Sign In",
+                        buttonName: "Sign In".tr,
                         onTap: () {
                           if (!signInController.formKey.currentState!
                               .validate()) {

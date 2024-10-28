@@ -4,7 +4,11 @@ class AppLanguage extends Translations {
   @override
   Map<String, Map<String, String>> get keys => {
         //english language
-        "en_us": {"home_screen": "Home Screen", "profile": "Profile"},
+        "en_us": {
+          "home_screen": "Home Screen",
+          "Sign In": "Sign In",
+          "Forget Password":"Forget Password",
+        },
 
         //bangla language
         "bn_BD": {
