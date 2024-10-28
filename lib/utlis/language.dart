@@ -9,6 +9,8 @@ class AppLanguage extends Translations {
           "Sign In": "Sign In",
           "Sign Up": "Sign Up",
           "Forget Password":"Forget Password",
+          "Your new password must be different from previous used passwords.":"Your new password must be different from previous used passwords.",
+          "Forget Password?":"Forget Password?"
         },
 
         //bangla language

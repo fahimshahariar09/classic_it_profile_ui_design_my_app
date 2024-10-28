@@ -16,8 +16,8 @@ class NewPassword extends StatelessWidget {
           child: Column(
             children: [
               SizedBox(height: 15),
-              const Text(
-                "Your new password must be different from previous used passwords.",
+              Text(
+                "Your new password must be different from previous used passwords.".tr,
                 style: TextStyle(fontSize: 16, fontWeight: FontWeight.w400),
               ),
               const SizedBox(height: 30),
