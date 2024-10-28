@@ -8,20 +8,27 @@ class AppLanguage extends Translations {
           "home_screen": "Home Screen",
           "Sign In": "Sign In",
           "Sign Up": "Sign Up",
-          "Forget Password":"Forget Password",
-          "Your new password must be different from previous used passwords.":"Your new password must be different from previous used passwords.",
-          "Forget Password?":"Forget Password?",
-          "Don’t worry ! It happens. Please enter the phone number we will send the OTP in this phone number.":"Don’t worry ! It happens. Please enter the phone number we will send the OTP in this phone number.",
-          "OTP VERIFICATION":"OTP VERIFICATION",
-          "Please enter the verification code sent to":"Please enter the verification code sent to",
-          "Don't receive code?":"Don't receive code?",
-          "Re-send":"Re-send",
+          "Forget Password": "Forget Password",
+          "Your new password must be different from previous used passwords.":
+              "Your new password must be different from previous used passwords.",
+          "Forget Password?": "Forget Password?",
+          "Don’t worry ! It happens. Please enter the phone number we will send the OTP in this phone number.":
+              "Don’t worry ! It happens. Please enter the phone number we will send the OTP in this phone number.",
+          "OTP VERIFICATION": "OTP VERIFICATION",
+          "Please enter the verification code sent to":
+              "Please enter the verification code sent to",
+          "Don't receive code?": "Don't receive code?",
+          "Re-send": "Re-send",
         },
 
         //bangla language
         "bn_BD": {
-          "home screen": "হোম স্ক্রীন",
-          "profile": "প্রোফাইল",
+          "Sign In": "সাইন ইন",
+          "Sign Up": "সাইন আপ",
+          "Forget Password": "",
+          "Your new password must be different from previous used passwords.":
+              "",
+          "Forget Password?": "",
         },
 
         //hindi language
