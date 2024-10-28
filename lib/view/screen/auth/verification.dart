@@ -12,22 +12,22 @@ class Verification extends StatelessWidget {
     return   Scaffold(
       body: SafeArea(
         child: Padding(
-          padding: EdgeInsets.symmetric(horizontal: 15),
+          padding: const EdgeInsets.symmetric(horizontal: 15),
           child: Column(
             children: [
-              SizedBox(height: 20),
+              const SizedBox(height: 20),
               CommonText(titel: "OTP VERIFICATION ".tr),
-              SizedBox(height: 10),
+              const SizedBox(height: 10),
               CommonText(
                 titel: "Please enter the verification code sent to :".tr,
                 fColor: Colors.grey,
               ),
-              CommonText(titel: "fahim@gmail.com"),
-              SizedBox(
+              const CommonText(titel: "fahim@gmail.com"),
+              const SizedBox(
                 height: 30,
               ),
-              SizedBox(height: 25),
-              Row(
+              const SizedBox(height: 25),
+              const Row(
                 mainAxisAlignment: MainAxisAlignment.spaceAround,
                 children: [
                   OtpField(),
@@ -39,10 +39,10 @@ class Verification extends StatelessWidget {
                   OtpField(),
                 ],
               ),
-              SizedBox(height: 15),
-              CustomTimer(),
-              SizedBox(height: 15),
-              Row(
+              const SizedBox(height: 15),
+              const CustomTimer(),
+              const SizedBox(height: 15),
+              const Row(
                 crossAxisAlignment: CrossAxisAlignment.center,
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
