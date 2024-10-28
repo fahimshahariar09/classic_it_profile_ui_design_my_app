@@ -7,6 +7,7 @@ class AppLanguage extends Translations {
         "en_us": {
           "home_screen": "Home Screen",
           "Sign In": "Sign In",
+          "Sign Up": "Sign Up",
           "Forget Password":"Forget Password",
         },
 

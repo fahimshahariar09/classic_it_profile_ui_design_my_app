@@ -34,7 +34,7 @@ class SignIn extends StatelessWidget {
                   children: [
                     GestureDetector(
                         onTap: () {},
-                        child: const CommonText(titel: "Forget Password")),
+                        child:  CommonText(titel: "Forget Password".tr)),
                   ],
                 ),
                 const SizedBox(height: 20),

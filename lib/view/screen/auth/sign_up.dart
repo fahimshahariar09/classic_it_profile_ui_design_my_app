@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:myapp/controller/ui_controller/auth/sign_up.dart';
 import 'package:myapp/view/common_widget/common_button.dart';
+import 'package:myapp/view/screen/auth/sign_in.dart';
 import 'package:myapp/view/screen/auth/widget/con_password_text_field.dart';
 import 'package:myapp/view/screen/auth/widget/email_text_field.dart';
 import 'package:myapp/view/screen/auth/widget/name_text_feild.dart';
@@ -18,23 +19,26 @@ class SignUp extends StatelessWidget {
         key: signUpController.formKey,
         child: Column(
           children: [
-            SizedBox(height: 20),
+            const SizedBox(height: 20),
             NameTextFeild(nameController: signUpController.nameController),
-            SizedBox(height: 15),
+            const SizedBox(height: 15),
             EmailTextField(emailController: signUpController.emailController),
-            SizedBox(height: 15),
+            const SizedBox(height: 15),
             PasswordTextField(
                 passwordController: signUpController.passwordController),
-            SizedBox(height: 15),
+            const SizedBox(height: 15),
             ConPasswordTextField(
                 conpasswordController: signUpController.conpasswordController),
-            SizedBox(height: 15),
-            CommonButton(buttonName: "Sign Up", onTap: () {
-              if(!signUpController.formKey.currentState!.validate()){
-                return;
-              }
-              signUpController.signupFun();
-            }),
+            const SizedBox(height: 15),
+            CommonButton(
+                buttonName: "Sign Up",
+                onTap: () {
+                  if (!signUpController.formKey.currentState!.validate()) {
+                    return;
+                  }
+                  Get.to(const SignIn());
+                  signUpController.signupFun();
+                }),
           ],
         ),
       ),
