@@ -12,7 +12,10 @@ class AppLanguage extends Translations {
           "Your new password must be different from previous used passwords.":"Your new password must be different from previous used passwords.",
           "Forget Password?":"Forget Password?",
           "Don’t worry ! It happens. Please enter the phone number we will send the OTP in this phone number.":"Don’t worry ! It happens. Please enter the phone number we will send the OTP in this phone number.",
-
+          "OTP VERIFICATION":"OTP VERIFICATION",
+          "Please enter the verification code sent to":"Please enter the verification code sent to",
+          "Don't receive code?":"Don't receive code?",
+          "Re-send":"Re-send",
         },
 
         //bangla language

@@ -19,7 +19,7 @@ class Verification extends StatelessWidget {
               CommonText(titel: "OTP VERIFICATION ".tr),
               SizedBox(height: 10),
               CommonText(
-                titel: "Please enter the verification code sent to :",
+                titel: "Please enter the verification code sent to :".tr,
                 fColor: Colors.grey,
               ),
               CommonText(titel: "fahim@gmail.com"),
