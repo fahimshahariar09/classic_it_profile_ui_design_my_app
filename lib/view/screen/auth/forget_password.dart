@@ -33,7 +33,7 @@ class ForgetPassword extends StatelessWidget {
                 ],
               ),
               const SizedBox(height: 10),
-              const Text(
+               Text(
                   "Don’t worry ! It happens. Please enter the phone number we will send the OTP in this phone number."),
               const SizedBox(
                 height: 20,

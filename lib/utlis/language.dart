@@ -10,7 +10,9 @@ class AppLanguage extends Translations {
           "Sign Up": "Sign Up",
           "Forget Password":"Forget Password",
           "Your new password must be different from previous used passwords.":"Your new password must be different from previous used passwords.",
-          "Forget Password?":"Forget Password?"
+          "Forget Password?":"Forget Password?",
+          "Don’t worry ! It happens. Please enter the phone number we will send the OTP in this phone number.":"Don’t worry ! It happens. Please enter the phone number we will send the OTP in this phone number.",
+
         },
 
         //bangla language
