@@ -34,12 +34,13 @@ class Setting extends StatelessWidget {
                   )
                 ],
               ),
-              SizedBox(height: 15),
+              const SizedBox(height: 15),
               Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
-                  Text("language "),
+                  const Text("language "),
                   DropdownButton(
-                    hint: Text("Please choose a location"),
+                    hint: const Text("Please choose a location"),
                     value: settingController.selectedLanguage.value,
                     onChanged: (newValue) {
                       settingController.selectedLanguage.value = newValue!;
