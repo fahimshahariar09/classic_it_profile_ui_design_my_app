@@ -38,7 +38,10 @@ class Setting extends StatelessWidget {
               Row(
                 children: [
                   Text("language "),
-                  DropdownButton(items: settingController.languageList.map(location), onChanged: onChanged)
+                  DropdownButton(
+                      hint: Text("Please choose a location"),
+                      value: settingController.selectedLanguage.value,
+                      items: settingController.languageList.map(location), onChanged: (value){})
                 ],
               )
             ],
