@@ -35,6 +35,12 @@ class Setting extends StatelessWidget {
                 ],
               ),
               SizedBox(height: 15),
+              Row(
+                children: [
+                  Text("language "),
+                  DropdownButton(items: settingController.languageList.map(location), onChanged: onChanged)
+                ],
+              )
             ],
           ),
         ),
