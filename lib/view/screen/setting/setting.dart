@@ -57,9 +57,9 @@ class Setting extends StatelessWidget {
                   )
                 ],
               ),
-              SizedBox(height: 10),
+              const SizedBox(height: 10),
               CommonButton(buttonName: "LogOut", onTap: (){
-                Get.to(SignIn());
+                Get.to(const SignIn());
               })
             ],
           ),
