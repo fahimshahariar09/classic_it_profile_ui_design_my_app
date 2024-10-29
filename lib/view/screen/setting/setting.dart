@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:myapp/controller/ui_controller/setting/setting.dart';
+import 'package:myapp/view/common_widget/common_button.dart';
+import 'package:myapp/view/screen/auth/sign_in.dart';
 
 class Setting extends StatelessWidget {
   const Setting({super.key});
@@ -54,7 +56,11 @@ class Setting extends StatelessWidget {
                     }).toList(),
                   )
                 ],
-              )
+              ),
+              SizedBox(height: 10),
+              CommonButton(buttonName: "LogOut", onTap: (){
+                Get.to(SignIn());
+              })
             ],
           ),
         ),
