@@ -41,7 +41,10 @@ class Setting extends StatelessWidget {
                   DropdownButton(
                       hint: Text("Please choose a location"),
                       value: settingController.selectedLanguage.value,
-                      items: settingController.languageList.map(location), onChanged: (value){})
+                      items: settingController.languageList.map(location), onChanged: (value){
+                        settingController.selectedLanguage.value =value;
+                        settingController.changeLanguageFun();
+                  })
                 ],
               )
             ],

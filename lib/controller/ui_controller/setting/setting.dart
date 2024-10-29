@@ -16,7 +16,7 @@ class SettingController extends GetxController {
 
   //language
 
-  changeFun() {
+  changeLanguageFun() {
     String local = "en";
     switch (selectedLanguage.value) {
       case "BD":
