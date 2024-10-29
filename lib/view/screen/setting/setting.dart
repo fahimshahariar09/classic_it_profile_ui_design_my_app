@@ -20,14 +20,21 @@ class Setting extends StatelessWidget {
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
-                  Text("ligth & night",style: TextStyle(fontSize: 16,fontWeight: FontWeight.w500),),
+                  const Text(
+                    "ligth & night",
+                    style: TextStyle(fontSize: 16, fontWeight: FontWeight.w500),
+                  ),
                   Switch(
-                      value: settingController.isLightTheme.value,
-                      onChanged: (value) {
-                        settingController.changeTheme();
-                      },activeColor: Colors.white,autofocus: true,)
+                    value: settingController.isLightTheme.value,
+                    onChanged: (value) {
+                      settingController.changeTheme();
+                    },
+                    activeColor: Colors.black,
+                    autofocus: true,
+                  )
                 ],
-              )
+              ),
+              SizedBox(height: 15),
             ],
           ),
         ),
