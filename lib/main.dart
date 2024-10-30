@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
+import 'package:myapp/utlis/language.dart';
 import 'package:myapp/utlis/theme.dart';
 import 'package:myapp/view/screen/profile/profile.dart';
 
@@ -11,9 +13,11 @@ class MyClass extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
+    return GetMaterialApp(
       debugShowCheckedModeBanner: false,
       theme: AppTheme().lightTheme,
+      translations: AppLanguage(),
+      locale: const Locale("bn"),
       home: const Profile(),
     );
   }
