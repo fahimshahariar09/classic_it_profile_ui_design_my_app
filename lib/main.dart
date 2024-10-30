@@ -3,6 +3,7 @@ import 'package:get/get.dart';
 import 'package:myapp/utlis/language.dart';
 import 'package:myapp/utlis/theme.dart';
 import 'package:myapp/view/screen/profile/profile.dart';
+import 'package:myapp/view/screen/setting/setting.dart';
 
 void main() {
   runApp(const MyClass());
@@ -18,7 +19,7 @@ class MyClass extends StatelessWidget {
       theme: AppTheme().lightTheme,
       translations: AppLanguage(),
       locale: const Locale("bn"),
-      home: const Profile(),
+      home: Setting(),
     );
   }
 }
