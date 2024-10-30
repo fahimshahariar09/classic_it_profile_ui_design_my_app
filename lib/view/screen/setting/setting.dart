@@ -43,7 +43,7 @@ class Setting extends StatelessWidget {
                 children: [
                   Text("language".tr),
                   Obx(() => DropdownButton(
-                        hint: Text("Please choose a location".tr),
+                        hint: Text("Please choose a location"),
                         value: settingController.selectedLanguage.value,
                         onChanged: (newValue) {
                           settingController.selectedLanguage.value = newValue!;

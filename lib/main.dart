@@ -18,7 +18,7 @@ class MyClass extends StatelessWidget {
       theme: AppTheme().lightTheme,
       translations: AppLanguage(),
       locale: const Locale("bn"),
-      home: Setting(),
+      home: const Setting(),
     );
   }
 }

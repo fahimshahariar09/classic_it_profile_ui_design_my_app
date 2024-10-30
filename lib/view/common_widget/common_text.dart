@@ -21,7 +21,7 @@ class CommonText extends StatelessWidget {
   Widget build(BuildContext context) {
     return Text(
       titel,
-      style: TextStyle(
+      style: const TextStyle(
           color: Colors.cyan,
           fontSize: 15,
           fontWeight: FontWeight.bold,

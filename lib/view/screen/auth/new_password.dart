@@ -15,10 +15,10 @@ class NewPassword extends StatelessWidget {
           padding: const EdgeInsets.symmetric(horizontal: 15),
           child: Column(
             children: [
-              SizedBox(height: 15),
+              const SizedBox(height: 15),
               Text(
                 "Your new password must be different from previous used passwords.".tr,
-                style: TextStyle(fontSize: 16, fontWeight: FontWeight.w400),
+                style: const TextStyle(fontSize: 16, fontWeight: FontWeight.w400),
               ),
               const SizedBox(height: 30),
               PasswordTextField(passwordController: controller.oldpassword),
