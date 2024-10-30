@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:myapp/utlis/theme.dart';
-import 'package:myapp/view/screen/setting/setting.dart';
+import 'package:myapp/view/screen/profile/profile.dart';
 
 void main() {
   runApp(const MyClass());
@@ -14,7 +14,7 @@ class MyClass extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       theme: AppTheme().lightTheme,
-      home: Setting(),
+      home: const Profile(),
     );
   }
 }
