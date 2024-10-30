@@ -24,7 +24,7 @@ class Setting extends StatelessWidget {
                     children: [
                       Text(
                         "ligth & night".tr,
-                        style: TextStyle(
+                        style: const TextStyle(
                             fontSize: 16, fontWeight: FontWeight.w500),
                       ),
                       Switch(
@@ -43,7 +43,7 @@ class Setting extends StatelessWidget {
                 children: [
                   Text("language".tr),
                   Obx(() => DropdownButton(
-                        hint: Text("Please choose a location"),
+                        hint: const Text("Please choose a location"),
                         value: settingController.selectedLanguage.value,
                         onChanged: (newValue) {
                           settingController.selectedLanguage.value = newValue!;
