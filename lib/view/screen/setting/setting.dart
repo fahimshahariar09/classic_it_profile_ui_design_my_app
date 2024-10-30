@@ -12,7 +12,7 @@ class Setting extends StatelessWidget {
     SettingController settingController = Get.put(SettingController());
     return Scaffold(
       appBar: AppBar(
-        title: const Text("Setting"),
+        title: Text("Setting".tr),
       ),
       body: SafeArea(
         child: Padding(
@@ -22,8 +22,8 @@ class Setting extends StatelessWidget {
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
-                  const Text(
-                    "ligth & night",
+                   Text(
+                    "ligth & night".tr,
                     style: TextStyle(fontSize: 16, fontWeight: FontWeight.w500),
                   ),
                   Switch(
@@ -40,9 +40,9 @@ class Setting extends StatelessWidget {
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
-                  const Text("language "),
+                   Text("language".tr),
                   DropdownButton(
-                    hint: const Text("Please choose a location"),
+                    hint: Text("Please choose a location".tr),
                     value: settingController.selectedLanguage.value,
                     onChanged: (newValue) {
                       settingController.selectedLanguage.value = newValue!;
