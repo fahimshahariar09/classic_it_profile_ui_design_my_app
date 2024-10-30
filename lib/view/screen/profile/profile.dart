@@ -11,6 +11,12 @@ class Profile extends StatelessWidget {
         children: [
           CircleAvatar(radius: 50,),
           CommonButton(buttonName: "Save", onTap: (){}),
+          Row(
+            children: [
+              Text("first name"),
+              Text("first name"),
+            ],
+          )
         ],
       ),
     );
