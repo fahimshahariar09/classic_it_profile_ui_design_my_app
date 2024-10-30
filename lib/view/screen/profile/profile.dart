@@ -9,20 +9,20 @@ class Profile extends StatelessWidget {
     return Scaffold(
       body: Column(
         children: [
-          CircleAvatar(radius: 50,),
-          SizedBox(height: 10),
+          const CircleAvatar(radius: 50,),
+          const SizedBox(height: 10),
           CommonButton(buttonName: "Save", onTap: (){}),
-          SizedBox(height: 10),
-          Row(
+          const SizedBox(height: 10),
+          const Row(
             children: [
               Text("first name"),
               Text("first name"),
             ],
           ),
-          SizedBox(height: 10),
-          Text("phone"),
-          SizedBox(height: 10),
-          Text("email"),
+          const SizedBox(height: 10),
+          const Text("phone"),
+          const SizedBox(height: 10),
+          const Text("email"),
         ],
       ),
     );
