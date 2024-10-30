@@ -6,7 +6,11 @@ class SettingController extends GetxController {
   RxBool isLightTheme = true.obs;
   //language
   RxString selectedLanguage = 'BD'.obs;
-  RxList<String> languageList = <String>["BD", "US", "India"].obs;
+  RxList<String> languageList = <String>[
+    "BD",
+    "US",
+    "India",
+  ].obs;
 
   //darkmode
   changeTheme() async {
