@@ -8,17 +8,21 @@ class Profile extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       body: Column(
+        mainAxisAlignment: MainAxisAlignment.start,
+        crossAxisAlignment: CrossAxisAlignment.center,
         children: [
           const CircleAvatar(
             radius: 50,
+            backgroundImage: AssetImage("assetName"),
           ),
           const SizedBox(height: 10),
           CommonButton(buttonName: "Save", onTap: () {}),
           const SizedBox(height: 10),
           const Row(
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
               Text("first name"),
-              Text("first name"),
+              Text("last name"),
             ],
           ),
           const SizedBox(height: 10),
