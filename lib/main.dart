@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:myapp/utlis/language.dart';
 import 'package:myapp/utlis/theme.dart';
+import 'package:myapp/view/screen/profile/profile.dart';
 import 'package:myapp/view/screen/setting/setting.dart';
 
 void main() {
@@ -18,7 +19,7 @@ class MyClass extends StatelessWidget {
       theme: AppTheme().lightTheme,
       translations: AppLanguage(),
       locale: const Locale("bn"),
-      home: const Setting(),
+      home: Profile(),
     );
   }
 }

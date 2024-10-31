@@ -10,7 +10,7 @@ class HomePage extends StatelessWidget {
         title: const Text("Home Page"),
         centerTitle: true,
       ),
-      body: const SafeArea(
+      body: SafeArea(
         child: Column(
           children: [],
         ),

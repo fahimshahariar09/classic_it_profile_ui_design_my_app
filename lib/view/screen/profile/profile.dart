@@ -9,9 +9,11 @@ class Profile extends StatelessWidget {
     return Scaffold(
       body: Column(
         children: [
-          const CircleAvatar(radius: 50,),
+          const CircleAvatar(
+            radius: 50,
+          ),
           const SizedBox(height: 10),
-          CommonButton(buttonName: "Save", onTap: (){}),
+          CommonButton(buttonName: "Save", onTap: () {}),
           const SizedBox(height: 10),
           const Row(
             children: [
