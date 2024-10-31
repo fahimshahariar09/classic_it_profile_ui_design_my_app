@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
 
 class CommonField extends StatelessWidget {
-  const CommonField({super.key});
+  const CommonField({super.key, this.hText});
+
+  final String? hText;
 
   @override
   Widget build(BuildContext context) {
@@ -16,6 +18,7 @@ class CommonField extends StatelessWidget {
         errorBorder: OutlineInputBorder(
           borderRadius: BorderRadius.circular(10),
         ),
+        hintText: hText,
       ),
     );
   }
