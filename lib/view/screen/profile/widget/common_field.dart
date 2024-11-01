@@ -9,6 +9,7 @@ class CommonField extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return TextField(
+      controller: controller,
       decoration: InputDecoration(
         focusedBorder: OutlineInputBorder(
           borderRadius: BorderRadius.circular(10),
