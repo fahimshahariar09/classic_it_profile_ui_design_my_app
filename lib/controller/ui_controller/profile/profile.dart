@@ -4,6 +4,8 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
 class ProfileController extends GetxController {
+  final TextEditingController fastnameController =TextEditingController();
+  final TextEditingController lastController =TextEditingController();
   final TextEditingController nameController =TextEditingController();
   final TextEditingController phoneController =TextEditingController();
   var name = ''.obs;
