@@ -3,7 +3,9 @@ import 'package:flutter/material.dart';
 class CommonField extends StatelessWidget {
   const CommonField({super.key, this.hText});
 
+
   final String? hText;
+  final TextEditingController controller =TextEditingController();
 
   @override
   Widget build(BuildContext context) {

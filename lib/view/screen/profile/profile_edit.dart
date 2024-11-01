@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
+import 'package:myapp/controller/ui_controller/profile/profile.dart';
 import 'package:myapp/view/screen/profile/widget/common_field.dart';
 
 class ProfileEdit extends StatelessWidget {
@@ -6,6 +8,7 @@ class ProfileEdit extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    ProfileController controller = Get.put(ProfileController());
     return Scaffold(
       appBar: AppBar(
         title: Text("Profile Edit"),
