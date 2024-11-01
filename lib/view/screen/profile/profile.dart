@@ -18,7 +18,7 @@ class Profile extends StatelessWidget {
           const SizedBox(height: 10),
           CommonButton(buttonName: "Save", onTap: () {}),
           const SizedBox(height: 10),
-          const Row(
+           const Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
               Text("first name"),
