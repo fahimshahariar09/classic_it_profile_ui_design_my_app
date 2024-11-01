@@ -28,7 +28,7 @@ class ProfileScreen extends StatelessWidget {
                       mainAxisSize: MainAxisSize.min,
                       children: [
                         TextField(
-                          controller: nameController..text = profileController.name.value,
+                          controller: nameController..text = profileController.fastname.value,
                           decoration: const InputDecoration(labelText: 'Enter your name'),
                         ),
                         TextField(
@@ -65,7 +65,7 @@ class ProfileScreen extends StatelessWidget {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            Obx(() => Text('Name: ${profileController.name.value}', style: const TextStyle(fontSize: 24))),
+            Obx(() => Text('Name: ${profileController.fastname.value}', style: const TextStyle(fontSize: 24))),
             const SizedBox(height: 10),
             Obx(() => Text('Phone: ${profileController.phone.value}', style: const TextStyle(fontSize: 24))),
             const SizedBox(height: 20),
