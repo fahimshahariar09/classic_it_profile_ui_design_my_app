@@ -6,16 +6,16 @@ import 'package:get/get.dart';
 class ProfileController extends GetxController {
   final TextEditingController fastnameController =TextEditingController();
   final TextEditingController lastController =TextEditingController();
-  final TextEditingController nameController =TextEditingController();
   final TextEditingController phoneController =TextEditingController();
-  var name = ''.obs;
-  var phone = ''.obs;
+  final TextEditingController emailController =TextEditingController();
+  var fastname = ''.obs;
+  var lastname = ''.obs;
 
   void updateName(String newName) {
-    name.value = newName;
+    fastname.value = newName;
   }
 
-  void updatePhone(String newPhone) {
-    phone.value = newPhone;
+  void updatelastName(String newPhone) {
+    lastname.value = newPhone;
   }
 }
