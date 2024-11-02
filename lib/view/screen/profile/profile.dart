@@ -8,7 +8,7 @@ class Profile extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    ProfileController controller = Get.put(ProfileController());
+    ProfileController profileController = Get.put(ProfileController());
     return Scaffold(
       body: Column(
         mainAxisAlignment: MainAxisAlignment.start,
@@ -24,7 +24,7 @@ class Profile extends StatelessWidget {
           const Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
-              Text("first name"),
+              Text("first name : ${profileController.fastname.value}"),
               Text("last name"),
             ],
           ),
