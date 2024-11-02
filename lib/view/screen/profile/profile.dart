@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
+import 'package:myapp/controller/ui_controller/profile/profile.dart';
 import 'package:myapp/view/common_widget/common_button.dart';
 
 class Profile extends StatelessWidget {
@@ -6,6 +8,7 @@ class Profile extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    ProfileController controller = Get.put(ProfileController());
     return Scaffold(
       body: Column(
         mainAxisAlignment: MainAxisAlignment.start,
@@ -18,7 +21,7 @@ class Profile extends StatelessWidget {
           const SizedBox(height: 10),
           CommonButton(buttonName: "Save", onTap: () {}),
           const SizedBox(height: 10),
-           const Row(
+          const Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
               Text("first name"),
