@@ -16,10 +16,14 @@ class ProfileEdit extends StatelessWidget {
       body: Column(
         children: [
           SizedBox(height: 15),
-          CommonField(controller: controller.fastnameController,),
+          CommonField(
+            controller: controller.fastnameController,
+          ),
           SizedBox(height: 10),
           CommonField(controller: controller.lastController),
-          SizedBox(height:10),
+          SizedBox(height: 10),
+          CommonField(controller: controller.phoneController),
+          SizedBox(height: 10),
           CommonField(controller: controller.phoneController),
           SizedBox(height: 10),
         ],
