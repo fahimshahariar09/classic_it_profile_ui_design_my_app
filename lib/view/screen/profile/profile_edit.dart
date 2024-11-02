@@ -20,6 +20,8 @@ class ProfileEdit extends StatelessWidget {
           SizedBox(height: 10),
           CommonField(controller: controller.lastController),
           SizedBox(height:10),
+          CommonField(controller: controller.phoneController),
+          SizedBox(height: 10),
         ],
       ),
     );
