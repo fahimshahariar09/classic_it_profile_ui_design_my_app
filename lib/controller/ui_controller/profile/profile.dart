@@ -8,7 +8,8 @@ class ProfileController extends GetxController {
   final TextEditingController emailController = TextEditingController();
   var fastname = ''.obs;
   var lastname = ''.obs;
-   var phone = ''.obs;
+  var phone = ''.obs;
+  var email = ''.obs;
 
   void updateName(String newName) {
     fastname.value = newName;
@@ -20,5 +21,9 @@ class ProfileController extends GetxController {
 
   void updatePhone(String newPhone) {
     phone.value = newPhone;
+  }
+
+  void updateEmail(String newPhone) {
+    email.value = newPhone;
   }
 }
