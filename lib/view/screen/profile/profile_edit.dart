@@ -11,21 +11,21 @@ class ProfileEdit extends StatelessWidget {
     ProfileController controller = Get.put(ProfileController());
     return Scaffold(
       appBar: AppBar(
-        title: Text("Profile Edit"),
+        title: const Text("Profile Edit"),
       ),
       body: Column(
         children: [
-          SizedBox(height: 15),
+          const SizedBox(height: 15),
           CommonField(
             controller: controller.fastnameController,
           ),
-          SizedBox(height: 10),
+          const SizedBox(height: 10),
           CommonField(controller: controller.lastController),
-          SizedBox(height: 10),
+          const SizedBox(height: 10),
           CommonField(controller: controller.phoneController),
-          SizedBox(height: 10),
+          const SizedBox(height: 10),
           CommonField(controller: controller.phoneController),
-          SizedBox(height: 10),
+          const SizedBox(height: 10),
         ],
       ),
     );
