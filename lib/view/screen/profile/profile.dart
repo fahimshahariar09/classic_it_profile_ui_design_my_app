@@ -8,6 +8,8 @@ class Profile extends StatelessWidget {
 
   final TextEditingController fastController = TextEditingController();
   final TextEditingController lastController = TextEditingController();
+  final TextEditingController phoneController = TextEditingController();
+  final TextEditingController emailController = TextEditingController();
 
   @override
   Widget build(BuildContext context) {
