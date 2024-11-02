@@ -4,7 +4,10 @@ import 'package:myapp/controller/ui_controller/profile/profile.dart';
 import 'package:myapp/view/common_widget/common_button.dart';
 
 class Profile extends StatelessWidget {
-  const Profile({super.key});
+   Profile({super.key});
+
+  final TextEditingController fastController = TextEditingController();
+  final TextEditingController lastController = TextEditingController();
 
   @override
   Widget build(BuildContext context) {
@@ -24,7 +27,7 @@ class Profile extends StatelessWidget {
           const Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
-              Text("first name : ${profileController.fastname.value}"),
+            //  Text("first name : ${.fastname.value}"),
               Text("last name"),
             ],
           ),
