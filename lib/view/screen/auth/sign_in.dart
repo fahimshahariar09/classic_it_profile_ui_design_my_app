@@ -47,7 +47,7 @@ class SignIn extends StatelessWidget {
                             return;
                           }
                           signInController.signinFun();
-                          Get.to(const Profile());
+                          Get.to( Profile());
                         })
                     : const CircularProgressIndicator()),
               ],
