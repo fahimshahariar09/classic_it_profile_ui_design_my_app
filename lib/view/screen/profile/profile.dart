@@ -29,7 +29,7 @@ class Profile extends StatelessWidget {
           const Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
-            //  Text("first name : ${.fastname.value}"),
+              Text("first name : "),
               Text("last name"),
             ],
           ),

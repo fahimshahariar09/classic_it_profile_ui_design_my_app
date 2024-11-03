@@ -34,7 +34,7 @@ class SignIn extends StatelessWidget {
                   children: [
                     GestureDetector(
                         onTap: () {},
-                        child:  CommonText(titel: "Forget Password".tr)),
+                        child: CommonText(titel: "Forget Password".tr)),
                   ],
                 ),
                 const SizedBox(height: 20),
@@ -47,7 +47,7 @@ class SignIn extends StatelessWidget {
                             return;
                           }
                           signInController.signinFun();
-                          Get.to( Profile());
+                          Get.to(Profile());
                         })
                     : const CircularProgressIndicator()),
               ],
