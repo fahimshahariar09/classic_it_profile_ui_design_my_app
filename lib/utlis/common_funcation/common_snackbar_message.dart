@@ -7,12 +7,24 @@ class CommonSnackbarMessage {
         backgroundColor: Colors.red.shade50,
         colorText: Colors.redAccent,
         snackStyle: SnackStyle.FLOATING,
-        duration: Duration(seconds: 1),
+        duration: const Duration(seconds: 1),
         overlayBlur: 5,
-        icon: Icon(
+        icon: const Icon(
           Icons.wifi_off_outlined,
           color: Colors.red,
         ),
+        snackPosition: SnackPosition.TOP);
+  }
+
+  static errorMessage({String? titel, required String text}) {
+    Get.snackbar(titel ?? "message", text,
+        backgroundColor: Colors.red.shade50,
+        duration: const Duration(seconds: 3),
+        icon: const Icon(
+          Icons.error,
+          color: Colors.red,
+        ),
+        colorText: Colors.red,
         snackPosition: SnackPosition.TOP);
   }
 }
