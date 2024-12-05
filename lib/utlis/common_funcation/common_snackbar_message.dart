@@ -27,4 +27,16 @@ class CommonSnackbarMessage {
         colorText: Colors.red,
         snackPosition: SnackPosition.TOP);
   }
+
+  static successMessage(String? titel, String text, IconData? icon) {
+    Get.snackbar(titel ?? "message", text,
+        icon: Icon(
+          icon ?? Icons.verified_user_sharp,
+          color: Colors.white,
+        ),
+        backgroundColor: Colors.blue.shade700,
+        duration: const Duration(seconds: 2),
+        colorText: Colors.white,
+        snackPosition: SnackPosition.TOP);
+  }
 }
