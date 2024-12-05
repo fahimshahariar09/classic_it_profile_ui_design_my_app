@@ -1,20 +1,30 @@
-
-import 'package:flutter/cupertino.dart';
+import 'package:flutter/material.dart';
 import 'package:flutter_easyloading/flutter_easyloading.dart';
 import 'package:myapp/utlis/theme/app_color.dart';
 
-class EasyLoadingSettings{
-
-  easyloadingSetting(){
+class EasyLoadingSettings {
+  easyloadingSetting() {
     EasyLoading.instance
-        ..displayDuration = Duration(milliseconds: 500)
-        ..loadingStyle = EasyLoadingStyle.custom
-        ..backgroundColor =AppColors.bg1LightColors
-        ..indicatorColor = AppColors.bgLightColors
-        ..maskColor =AppColors.bg1LightColors
-        ..textColor =AppColors.bgLightColors
-        ..contentPadding =EdgeInsets.symmetric(horizontal: 50,vertical: 20)
-        ..indicatorType=EasyLoadingIndicatorType.fadingGrid
-        ..userInteractions =
+      ..displayDuration = const Duration(milliseconds: 500)
+      ..loadingStyle = EasyLoadingStyle.custom
+      ..backgroundColor = AppColors.bg1LightColors
+      ..indicatorColor = AppColors.bgLightColors
+      ..maskColor = AppColors.bg1LightColors
+      ..textColor = AppColors.bgLightColors
+      ..contentPadding =
+          const EdgeInsets.symmetric(horizontal: 50, vertical: 20)
+      ..indicatorType = EasyLoadingIndicatorType.fadingGrid
+      ..userInteractions = false
+      ..successWidget = const Icon(
+        Icons.check_circle_rounded,
+        size: 40,
+        color: Colors.white,
+      )
+      ..errorWidget = const Icon(
+        Icons.error_outline,
+        size: 30,
+        color: Colors.white,
+      )
+      ..dismissOnTap = false;
   }
 }
