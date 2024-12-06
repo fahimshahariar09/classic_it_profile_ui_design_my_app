@@ -1,5 +1,5 @@
-import 'dart:developer';
 
+import 'package:flutter/material.dart';
 import 'package:flutter_easyloading/flutter_easyloading.dart';
 
 class ChangePasswordService {
@@ -9,7 +9,7 @@ class ChangePasswordService {
       await EasyLoading.showSuccess("changed");
       return true;
     } catch (e) {
-      log("error $e");
+      debugPrint("error $e");
     }
     await EasyLoading.showError("something went wrong...!!");
     return false;
