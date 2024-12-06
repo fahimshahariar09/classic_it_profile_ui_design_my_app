@@ -41,6 +41,7 @@ dependencies:
   flutter_sslcommerz: ^2.3.6
   flutter_easyloading: ^3.0.5
   connectivity_plus: ^6.1.0
+  flutter_secure_storage: ^9.2.2
 
 dev_dependencies:
   flutter_test:
