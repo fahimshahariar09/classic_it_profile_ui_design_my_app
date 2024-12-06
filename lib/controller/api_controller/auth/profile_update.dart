@@ -1,5 +1,8 @@
+import 'dart:convert';
+
 import 'package:flutter/cupertino.dart';
 import 'package:flutter_easyloading/flutter_easyloading.dart';
+import 'package:myapp/controller/local_storage/local_storage.dart';
 
 class ProfileUpdateService {
   static Future<bool> profileupdateService() async {
@@ -17,6 +20,7 @@ class ProfileUpdateService {
             "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ530QmZxSQdjIVUK53CXis8gnzUG5m7Zsupg&s",
         "date": "05 dec 2024"
       };
+      await LocalData().writeData(key: "userInfo", value: jsonEncode(data));
       await EasyLoading.showSuccess("success");
       return true;
     } catch (e) {
