@@ -1,34 +1,34 @@
 import 'package:flutter/material.dart';
+import 'package:myapp/utlis/theme/app_color.dart';
 import 'package:myapp/view/common_widget/custom_text.dart';
 
-class CommonButton extends StatelessWidget {
-  const CommonButton(
-      {super.key,
-      required this.buttonName,
-      this.buttonHeight,
-      this.buttonWidth,
-      this.buttonColor,
-      this.textColor,
-      required this.onTap});
-
-  final String buttonName;
-  final double? buttonHeight;
-  final double? buttonWidth;
-  final Color? buttonColor;
-  final Color? textColor;
+class CustomButton extends StatelessWidget {
+  const CustomButton({super.key, required this.text, required this.onTap,   this.buttonWidth});
+  final String text;
   final VoidCallback onTap;
+  final double? buttonWidth;
 
   @override
   Widget build(BuildContext context) {
     return InkWell(
       onTap: onTap,
       child: Card(
-        color: buttonColor ?? Colors.blue,
-        child: SizedBox(
-          height: buttonHeight ?? 50,
-          width: buttonWidth ?? MediaQuery.sizeOf(context).width,
-          child: Center(
-            child: CommonText(titel: buttonName),
+        margin: const EdgeInsets.symmetric(vertical: 15, horizontal: 5),
+        color: AppColors.bg1LightColor,
+        shape: OutlineInputBorder(borderRadius: BorderRadius.circular(5), borderSide: BorderSide.none),
+        child: Padding(
+          padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 15),
+          child: SizedBox(
+            height: 30,
+            width: buttonWidth ?? MediaQuery.sizeOf(context).width,
+            child: Center(
+              child: CustomTextWidget(
+                text: text,
+                fontSize: 20,
+                fontWeight: FontWeight.w500,
+                fontColor: AppColors.primaryLightColor,
+              ),
+            ),
           ),
         ),
       ),
