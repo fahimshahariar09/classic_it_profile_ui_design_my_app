@@ -16,13 +16,13 @@ class Verification extends StatelessWidget {
           child: Column(
             children: [
               const SizedBox(height: 20),
-              CommonText(titel: "OTP VERIFICATION ".tr),
+              CustomTextWidget(text: "OTP VERIFICATION ".tr),
               const SizedBox(height: 10),
-              CommonText(
-                titel: "Please enter the verification code sent to :".tr,
-                fColor: Colors.grey,
+              CustomTextWidget(
+                text: "Please enter the verification code sent to :".tr,
+                fontColor: Colors.grey,
               ),
-              const CommonText(titel: "fahim@gmail.com"),
+              const CustomTextWidget(text: "fahim@gmail.com"),
               const SizedBox(
                 height: 30,
               ),
@@ -46,9 +46,9 @@ class Verification extends StatelessWidget {
                 crossAxisAlignment: CrossAxisAlignment.center,
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
-                  CommonText(
-                    titel: "Don't receive code? ",
-                    fColor: Colors.grey,
+                  CustomTextWidget(
+                    text: "Don't receive code? ",
+                    fontColor: Colors.grey,
                   ),
                   CommonText(
                     titel: "Re-send",fColor: Colors.black,
