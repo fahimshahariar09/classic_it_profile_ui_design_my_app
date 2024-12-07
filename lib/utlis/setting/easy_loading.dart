@@ -7,10 +7,10 @@ class EasyLoadingSettings {
     EasyLoading.instance
       ..displayDuration = const Duration(milliseconds: 500)
       ..loadingStyle = EasyLoadingStyle.custom
-      ..backgroundColor = AppColors.bg1LightColors
-      ..indicatorColor = AppColors.bgLightColors
-      ..maskColor = AppColors.bg1LightColors
-      ..textColor = AppColors.bgLightColors
+      ..backgroundColor = AppColors.bg1LightColor
+      ..indicatorColor = AppColors.bgLightColor
+      ..maskColor = AppColors.bg1LightColor
+      ..textColor = AppColors.bgLightColor
       ..contentPadding =
           const EdgeInsets.symmetric(horizontal: 50, vertical: 20)
       ..indicatorType = EasyLoadingIndicatorType.fadingGrid
