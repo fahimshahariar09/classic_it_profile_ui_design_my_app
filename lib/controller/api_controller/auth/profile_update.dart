@@ -7,7 +7,7 @@ import 'package:myapp/controller/local_storage/local_storage.dart';
 class ProfileUpdateService {
   static Future<bool> profileupdateService() async {
     try {
-      await Future.delayed(Duration(seconds: 2));
+      await Future.delayed(const Duration(seconds: 2));
 
       var data = {
         "id": 4,

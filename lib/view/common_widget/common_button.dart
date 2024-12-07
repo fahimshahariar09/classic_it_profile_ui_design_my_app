@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:myapp/view/common_widget/common_text.dart';
+import 'package:myapp/view/common_widget/custom_text.dart';
 
 class CommonButton extends StatelessWidget {
   const CommonButton(

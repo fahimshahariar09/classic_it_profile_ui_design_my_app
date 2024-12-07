@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:myapp/controller/ui_controller/auth/sign_in.dart';
 import 'package:myapp/view/common_widget/common_button.dart';
-import 'package:myapp/view/common_widget/common_text.dart';
+import 'package:myapp/view/common_widget/custom_text.dart';
 import 'package:myapp/view/screen/auth/widget/email_text_field.dart';
 import 'package:myapp/view/screen/auth/widget/password_text_field.dart';
 import 'package:myapp/view/screen/profile/profile.dart';

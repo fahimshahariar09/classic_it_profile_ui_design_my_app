@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:myapp/view/common_widget/common_text.dart';
+import 'package:myapp/view/common_widget/custom_text.dart';
 import 'package:myapp/view/common_widget/custom_timer.dart';
 import 'package:myapp/view/screen/auth/widget/otp_field.dart';
 
