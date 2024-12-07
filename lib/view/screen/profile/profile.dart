@@ -13,7 +13,7 @@ class Profile extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    ProfileController profileController = Get.put(ProfileController());
+    Get.put(ProfileController());
     return Scaffold(
       body: Column(
         mainAxisAlignment: MainAxisAlignment.start,
@@ -24,7 +24,7 @@ class Profile extends StatelessWidget {
             backgroundImage: AssetImage("assetName"),
           ),
           const SizedBox(height: 10),
-          CommonButton(buttonName: "Save", onTap: () {}),
+          CustomButton(text: "Save", onTap: () {}),
           const SizedBox(height: 10),
           const Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
