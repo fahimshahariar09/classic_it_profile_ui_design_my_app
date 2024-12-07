@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:myapp/controller/ui_controller/profile/profile.dart';
-import 'package:myapp/view/common_widget/common_button.dart';
+import 'package:myapp/view/common_widget/custom_button.dart';
 
 class Profile extends StatelessWidget {
    Profile({super.key});
