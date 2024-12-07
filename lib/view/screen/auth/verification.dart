@@ -50,8 +50,8 @@ class Verification extends StatelessWidget {
                     text: "Don't receive code? ",
                     fontColor: Colors.grey,
                   ),
-                  CommonText(
-                    titel: "Re-send",fColor: Colors.black,
+                  CustomTextWidget(
+                    text: "Re-send",fontColor: Colors.black,
                   ),
                 ],
               ),

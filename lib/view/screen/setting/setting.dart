@@ -59,8 +59,8 @@ class Setting extends StatelessWidget {
                 ],
               ),
               const SizedBox(height: 10),
-              CommonButton(
-                  buttonName: "LogOut",
+              CustomButton(
+                  text: "LogOut",
                   onTap: () {
                     Get.to(const SignIn());
                   })
