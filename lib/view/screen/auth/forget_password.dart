@@ -25,10 +25,10 @@ class ForgetPassword extends StatelessWidget {
               const SizedBox(height: 10),
               const Row(
                 children: [
-                  CommonText(
-                    titel: "Forget Password?",
-                    fWeight: FontWeight.w600,
-                    fSize: 18,
+                  CustomTextWidget(
+                    text: "Forget Password?",
+                    fontWeight: FontWeight.w600,
+                    fontSize: 18,
                   ),
                 ],
               ),

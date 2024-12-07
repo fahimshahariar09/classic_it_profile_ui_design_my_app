@@ -34,13 +34,13 @@ class SignIn extends StatelessWidget {
                   children: [
                     GestureDetector(
                         onTap: () {},
-                        child: CommonText(titel: "Forget Password".tr)),
+                        child: CustomTextWidget(text: "Forget Password".tr)),
                   ],
                 ),
                 const SizedBox(height: 20),
                 Obx(() => signInController.isLoading.isTrue
-                    ? CommonButton(
-                        buttonName: "Sign In".tr,
+                    ? CustomButton(
+                        text: "Sign In".tr,
                         onTap: () {
                           if (!signInController.formKey.currentState!
                               .validate()) {
