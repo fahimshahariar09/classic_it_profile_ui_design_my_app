@@ -1,10 +1,10 @@
 import 'dart:convert';
 import 'dart:io';
-
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:image_picker/image_picker.dart';
 import 'package:myapp/controller/api_controller/auth/change_password.dart';
+import 'package:myapp/controller/api_controller/auth/profile_update.dart';
 import 'package:myapp/controller/local_storage/local_storage.dart';
 import 'package:myapp/utlis/common_funcation/common_snackbar_message.dart';
 import 'package:permission_handler/permission_handler.dart';
@@ -54,7 +54,7 @@ class ProfileController extends GetxController {
     }
   }
 
-  changePasswordFun() async {
+  Future<bool> changePasswordFun() async {
     isLoading.value = true;
     bool status = await ChangePasswordService.changepasswordService(
         currentPass: oldPasswordController.text,
@@ -64,10 +64,20 @@ class ProfileController extends GetxController {
     return status;
   }
 
-  Future<bool> accountDeletedFuncation()async{
-    isLoading.value =true;
+  Future<bool> accountDeletedFuncation() async {
+    isLoading.value = true;
     await Future.delayed(const Duration(seconds: 2));
-    isLoading.value=false;
+    isLoading.value = false;
     return true;
+  }
+
+  profileUpdateFuncation() async {
+    isLoading.value = true;
+    bool status = await ProfileUpdateService.profileupdateService(
+        name: nameController.text,
+        address: addressController.text,
+        image: File(profileIMG.value?.path ?? ""));
+    isLoading.value = false;
+    return status;
   }
 }

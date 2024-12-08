@@ -5,7 +5,7 @@ import 'package:flutter_easyloading/flutter_easyloading.dart';
 import 'package:myapp/controller/local_storage/local_storage.dart';
 
 class ProfileUpdateService {
-  static Future<bool> profileupdateService() async {
+  static Future<bool> profileupdateService({required String name,required String address,required String image,}) async {
     try {
       await Future.delayed(const Duration(seconds: 2));
 
