@@ -5,6 +5,7 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:image_picker/image_picker.dart';
 import 'package:myapp/controller/local_storage/local_storage.dart';
+import 'package:permission_handler/permission_handler.dart';
 
 class ProfileController extends GetxController {
   final formKey = GlobalKey<FormState>();
@@ -33,6 +34,17 @@ class ProfileController extends GetxController {
       userInfo.value = jsonDecode(a);
       nameController.text = userInfo['name'] ?? "";
       addressController.text = userInfo['address'] ?? "";
+    }
+  }
+
+  getImage() async {
+    var status = await Permission.camera.request();
+    if (status.isGranted) {
+      final pickedFile =
+          await picker.pickImage(source: imageSource, imageQuality: 25);
+      if (pickedFile != null) {
+        profileIMG.value = File(pickedFile.path);
+      }
     }
   }
 }
