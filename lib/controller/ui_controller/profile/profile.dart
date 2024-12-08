@@ -4,7 +4,10 @@ import 'dart:io';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:image_picker/image_picker.dart';
+import 'package:myapp/controller/api_controller/auth/change_password.dart';
 import 'package:myapp/controller/local_storage/local_storage.dart';
+import 'package:myapp/utlis/common_funcation/common_snackbar_message.dart';
+import 'package:myapp/view/screen/profile/widget/change_password_section.dart';
 import 'package:permission_handler/permission_handler.dart';
 
 class ProfileController extends GetxController {
@@ -25,6 +28,7 @@ class ProfileController extends GetxController {
   final picker = ImagePicker();
   @override
   void onInit() {
+    getProfileInfo();
     super.onInit();
   }
 
@@ -37,7 +41,7 @@ class ProfileController extends GetxController {
     }
   }
 
-  getImage() async {
+  getImage({required ImageSource imageSource}) async {
     var status = await Permission.camera.request();
     if (status.isGranted) {
       final pickedFile =
@@ -45,6 +49,14 @@ class ProfileController extends GetxController {
       if (pickedFile != null) {
         profileIMG.value = File(pickedFile.path);
       }
+    } else {
+      CommonSnackbarMessage.errorMessage(
+          text: "Gallery or Camera Permission are Denied");
     }
+  }
+
+  changePasswordFun() async {
+    isLoading.value = true;
+    bool status = await ChangePasswordService.changepasswordService();
   }
 }
