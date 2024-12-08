@@ -1,8 +1,10 @@
+import 'dart:convert';
 import 'dart:io';
 
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:image_picker/image_picker.dart';
+import 'package:myapp/controller/local_storage/local_storage.dart';
 
 class ProfileController extends GetxController {
   final formKey = GlobalKey<FormState>();
@@ -22,7 +24,15 @@ class ProfileController extends GetxController {
   final picker = ImagePicker();
   @override
   void onInit() {
-
     super.onInit();
+  }
+
+  getProfileInfo() async {
+    var a = await LocalData().readData(key: "userInfo");
+    if (a != "") {
+      userInfo.value = jsonDecode(a);
+      nameController.text = userInfo['name'] ?? "";
+      addressController.text = userInfo['address'] ?? "";
+    }
   }
 }

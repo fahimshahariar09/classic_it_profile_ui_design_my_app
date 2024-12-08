@@ -27,30 +27,30 @@ class ProfileScreen extends StatelessWidget {
                     child: Column(
                       mainAxisSize: MainAxisSize.min,
                       children: [
-                        TextField(
-                          controller: nameController..text = profileController.fastname.value,
-                          decoration: const InputDecoration(labelText: 'Enter your name'),
-                        ),
-                        TextField(
-                          controller: phoneController..text = profileController.phone.value,
-                          decoration: const InputDecoration(labelText: 'Enter your phone'),
-                          keyboardType: TextInputType.phone,
-                        ),
+                        // TextField(
+                        //   controller: nameController..text = profileController.fastname.value,
+                        //   decoration: const InputDecoration(labelText: 'Enter your name'),
+                        // ),
+                        // TextField(
+                        //   controller: phoneController..text = profileController.phone.value,
+                        //   decoration: const InputDecoration(labelText: 'Enter your phone'),
+                        //   keyboardType: TextInputType.phone,
+                        // ),
                         const SizedBox(height: 20),
-                        ElevatedButton(
-                          onPressed: () {
-                            if (nameController.text.isNotEmpty) {
-                              profileController.updateName(nameController.text);
-                            }
-                            if (phoneController.text.isNotEmpty) {
-                              profileController.updatePhone(phoneController.text);
-                            }
-                            nameController.clear();
-                            phoneController.clear();
-                            Get.back(); // Close the bottom sheet
-                          },
-                          child: const Text('Save Changes'),
-                        ),
+                        // ElevatedButton(
+                        //   onPressed: () {
+                        //     if (nameController.text.isNotEmpty) {
+                        //       profileController.updateName(nameController.text);
+                        //     }
+                        //     if (phoneController.text.isNotEmpty) {
+                        //       profileController.updatePhone(phoneController.text);
+                        //     }
+                        //     nameController.clear();
+                        //     phoneController.clear();
+                        //     Get.back(); // Close the bottom sheet
+                        //   },
+                        //   child: const Text('Save Changes'),
+                        // ),
                       ],
                     ),
                   );
@@ -65,10 +65,10 @@ class ProfileScreen extends StatelessWidget {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            Obx(() => Text('Name: ${profileController.fastname.value}', style: const TextStyle(fontSize: 24))),
-            const SizedBox(height: 10),
-            Obx(() => Text('Phone: ${profileController.phone.value}', style: const TextStyle(fontSize: 24))),
-            const SizedBox(height: 20),
+            // Obx(() => Text('Name: ${profileController.fastname.value}', style: const TextStyle(fontSize: 24))),
+            // const SizedBox(height: 10),
+            // Obx(() => Text('Phone: ${profileController.phone.value}', style: const TextStyle(fontSize: 24))),
+            // const SizedBox(height: 20),
             Center(
               child: ElevatedButton(
                 onPressed: () {
