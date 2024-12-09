@@ -1,10 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:myapp/utlis/theme/app_color.dart';
+import 'package:myapp/view/common_widget/custom_text.dart';
 
 class CustomSwitch extends StatelessWidget {
-  const CustomSwitch({super.key, required this.onTap, this.value});
+  const CustomSwitch(
+      {super.key, required this.onTap, this.value, required this.onText});
 
   final VoidCallback onTap;
+  final String onText;
   final dynamic value;
 
   @override
@@ -21,6 +24,14 @@ class CustomSwitch extends StatelessWidget {
               : Theme.of(context).cardColor,
           borderRadius: BorderRadius.circular(5),
           border: Border.all(color: Colors.transparent),
+        ),
+        child: CustomTextWidget(
+          text: onText,
+          fontColor: value.value == false
+              ? AppColors.bg1LightColor
+              : AppColors.bgLightColor,
+          fontWeight: FontWeight.w600,
+          fontSize: 14,
         ),
       ),
     );
