@@ -50,25 +50,29 @@ class ChangePasswordSection extends StatelessWidget {
                 labelText: "confram_password",
               ),
               const SizedBox(height: 10),
-              CustomButton(
-                  text: "edit",
-                  onTap: () async {
-                    FocusScope.of(context).unfocus();
-                    if (!profileController.formKey.currentState!.validate()) {
-                      return;
-                    }
-                    if (!await ConnectionChecker.connectionChecker()) {
-                      CommonSnackbarMessage.noInternetConnection();
-                      return;
-                    }
-                    bool status = await profileController.changePasswordFun();
-                    if(status){
-                      profileController.confPasswordController.clear();
-                      profileController.newPasswordController.clear();
-                      profileController.oldPasswordController.clear();
-                      Get.back();
-                    }
-                  })
+              Obx(() => profileController.isLoading.value
+                  ? CustomButton(
+                      text: "edit",
+                      onTap: () async {
+                        FocusScope.of(context).unfocus();
+                        if (!profileController.formKey.currentState!
+                            .validate()) {
+                          return;
+                        }
+                        if (!await ConnectionChecker.connectionChecker()) {
+                          CommonSnackbarMessage.noInternetConnection();
+                          return;
+                        }
+                        bool status =
+                            await profileController.changePasswordFun();
+                        if (status) {
+                          profileController.confPasswordController.clear();
+                          profileController.newPasswordController.clear();
+                          profileController.oldPasswordController.clear();
+                          Get.back();
+                        }
+                      })
+                  : const CircularProgressIndicator()),
             ],
           ),
         ),
