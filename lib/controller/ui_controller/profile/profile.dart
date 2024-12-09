@@ -80,4 +80,17 @@ class ProfileController extends GetxController {
     isLoading.value = false;
     return status;
   }
+
+  @override
+  void dispose() {
+    nameController.dispose();
+    mailController.dispose();
+    phoneController.dispose();
+    addressController.dispose();
+    oldPasswordController.dispose();
+    newPasswordController.dispose();
+    confPasswordController.dispose();
+    super.dispose();
+  }
+
 }
