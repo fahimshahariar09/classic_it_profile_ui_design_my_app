@@ -12,7 +12,7 @@ class ChangePasswordSection extends StatelessWidget {
   Widget build(BuildContext context) {
     ProfileController profileController = Get.put(ProfileController());
     return Padding(
-      padding: EdgeInsets.only(bottom: 10, right: 10, left: 10, top: 10),
+      padding: const EdgeInsets.only(bottom: 10, right: 10, left: 10, top: 10),
       child: SingleChildScrollView(
         child: Form(
           key: profileController.formKey,
@@ -34,6 +34,15 @@ class ChangePasswordSection extends StatelessWidget {
                 ],
               ),
               SizedBox(height: 10),
+              CustomTextField(
+                  controller: profileController.oldPasswordController,
+                  labelText: "current_password"),
+              CustomTextField(
+                  controller: profileController.newPasswordController,
+                  labelText: "new_password"),
+              CustomTextField(
+                  controller: profileController.confPasswordController,
+                  labelText: "confram_password"),
             ],
           ),
         ),
