@@ -1,7 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:myapp/controller/ui_controller/profile/profile.dart';
+import 'package:myapp/utlis/common_funcation/common_snackbar_message.dart';
+import 'package:myapp/utlis/common_funcation/internet_connection%20_check.dart';
 import 'package:myapp/utlis/theme/app_color.dart';
+import 'package:myapp/view/common_widget/custom_button.dart';
 import 'package:myapp/view/common_widget/custom_text.dart';
 import 'package:myapp/view/screen/profile/widget/custom_text_field.dart';
 
@@ -18,7 +21,7 @@ class ChangePasswordSection extends StatelessWidget {
           key: profileController.formKey,
           child: Column(
             children: [
-              Row(
+              const Row(
                 children: [
                   Icon(
                     Icons.vpn_key,
@@ -33,16 +36,32 @@ class ChangePasswordSection extends StatelessWidget {
                   )
                 ],
               ),
-              SizedBox(height: 10),
+              const SizedBox(height: 10),
               CustomTextField(
-                  controller: profileController.oldPasswordController,
-                  labelText: "current_password"),
+                controller: profileController.oldPasswordController,
+                labelText: "current_password",
+              ),
               CustomTextField(
-                  controller: profileController.newPasswordController,
-                  labelText: "new_password"),
+                controller: profileController.newPasswordController,
+                labelText: "new_password",
+              ),
               CustomTextField(
-                  controller: profileController.confPasswordController,
-                  labelText: "confram_password"),
+                controller: profileController.confPasswordController,
+                labelText: "confram_password",
+              ),
+              const SizedBox(height: 10),
+              CustomButton(
+                  text: "edit",
+                  onTap: () async {
+                    FocusScope.of(context).unfocus();
+                    if (!profileController.formKey.currentState!.validate()) {
+                      return;
+                    }
+                    if (!await ConnectionChecker.connectionChecker()) {
+                      CommonSnackbarMessage.noInternetConnection();
+                      return;
+                    }
+                  })
             ],
           ),
         ),
