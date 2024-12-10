@@ -5,6 +5,7 @@ import 'package:myapp/utlis/common_funcation/common_snackbar_message.dart';
 import 'package:myapp/utlis/common_funcation/internet_connection%20_check.dart';
 import 'package:myapp/utlis/theme/app_color.dart';
 import 'package:myapp/view/common_widget/custom_button.dart';
+import 'package:myapp/view/common_widget/custom_loading.dart';
 import 'package:myapp/view/screen/profile/widget/custom_text_field.dart';
 
 class DeletedAccountSection extends StatelessWidget {
@@ -32,24 +33,28 @@ class DeletedAccountSection extends StatelessWidget {
                     labelText: "current_password",
                   ),
                   const SizedBox(height: 10),
-                  CustomButton(
-                      text: "deleted",
-                      buttonWidth: 150,
-                      onTap: () async {
-                        FocusScope.of(context).unfocus();
-                        if(!profileController.formKey.currentState!.validate()){
-                          return;
-                        }
-                        if(!await ConnectionChecker.connectionChecker()){
-                          CommonSnackbarMessage.noInternetConnection();
-                          return;
-                        }
-                        bool status = await profileController.accountDeletedFuncation();
-                        if(status){
-                          profileController.oldPasswordController.clear();
-                          Get.back();
-                        }
-                      })
+                  Obx(() => profileController.isLoading.value
+                      ? const CustomLoading()
+                      : CustomButton(
+                          text: "deleted",
+                          buttonWidth: 150,
+                          onTap: () async {
+                            FocusScope.of(context).unfocus();
+                            if (!profileController.formKey.currentState!
+                                .validate()) {
+                              return;
+                            }
+                            if (!await ConnectionChecker.connectionChecker()) {
+                              CommonSnackbarMessage.noInternetConnection();
+                              return;
+                            }
+                            bool status = await profileController
+                                .accountDeletedFuncation();
+                            if (status) {
+                              profileController.oldPasswordController.clear();
+                              Get.back();
+                            }
+                          }))
                 ],
               )
             ],
