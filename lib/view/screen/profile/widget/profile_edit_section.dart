@@ -1,3 +1,5 @@
+import 'dart:io';
+
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:image_picker/image_picker.dart';
@@ -18,12 +20,12 @@ class ProfileEditSection extends StatelessWidget {
             Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                CustomTextWidget(
+                const CustomTextWidget(
                   text: "profile_edit",
                   fontSize: 20,
                   fontWeight: FontWeight.w500,
                 ),
-                SizedBox(height: 10),
+                const SizedBox(height: 10),
                 InkWell(
                   onTap: () {
                     profileController.getImage(
@@ -31,7 +33,21 @@ class ProfileEditSection extends StatelessWidget {
                   },
                   child: Column(
                     children: [
-
+                      Obx(() => CircleAvatar(
+                            radius: 40,
+                            backgroundColor: Colors.grey,
+                            backgroundImage: profileController
+                                        .profileIMG.value ==
+                                    null
+                                ? NetworkImage(
+                                    "${profileController.userInfo["profile_image"] ?? ""}")
+                                : FileImage(File(profileController
+                                    .profileIMG.value!.path)) as ImageProvider,
+                          )),
+                      const CustomTextWidget(
+                        text: "Tap to change image",
+                        fontSize: 11,
+                      )
                     ],
                   ),
                 )
