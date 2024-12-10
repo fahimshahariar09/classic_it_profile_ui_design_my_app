@@ -1,14 +1,30 @@
 import 'package:flutter/material.dart';
+import 'package:myapp/view/common_widget/custom_text.dart';
 
 class SettingListTile extends StatelessWidget {
-  const SettingListTile({super.key, required this.onTap});
+  const SettingListTile({super.key, required this.onTap, required this.titel});
 
   final VoidCallback onTap;
+  final String titel;
 
   @override
   Widget build(BuildContext context) {
     return InkWell(
       onTap: onTap,
+      child: Card(
+        surfaceTintColor: Colors.transparent,
+        shape: const OutlineInputBorder(borderSide: BorderSide.none),
+        child: Row(
+          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+          children: [
+            CustomTextWidget(text: titel),
+            const Icon(
+              Icons.arrow_forward_ios_sharp,
+              size: 17,
+            )
+          ],
+        ),
+      ),
     );
   }
 }
