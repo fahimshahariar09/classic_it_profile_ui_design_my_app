@@ -2,7 +2,9 @@ import 'package:flutter/material.dart';
 import 'package:myapp/utlis/theme/app_color.dart';
 
 class CustomLoading extends StatelessWidget {
-  const CustomLoading({super.key});
+  const CustomLoading({super.key,  this.buttonwidth});
+
+  final double? buttonwidth;
 
   @override
   Widget build(BuildContext context) {
@@ -15,7 +17,7 @@ class CustomLoading extends StatelessWidget {
       ),
       child: SizedBox(
         height: 35,
-        width: MediaQuery.sizeOf(context).width,
+        width: buttonwidth ?? MediaQuery.sizeOf(context).width,
         child: const CircularProgressIndicator(
           backgroundColor: Colors.white,
           color: AppColors.bg1LightColor,
