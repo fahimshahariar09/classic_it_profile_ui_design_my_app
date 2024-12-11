@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:myapp/controller/api_controller/auth/log_out.dart';
 import 'package:myapp/controller/local_storage/local_storage.dart';
+import 'package:myapp/controller/ui_controller/profile/profile.dart';
 import 'package:myapp/view/common_widget/custom_text.dart';
 import 'package:myapp/view/screen/home/home_page.dart';
 import 'package:myapp/view/screen/profile/widget/change_password_section.dart';
@@ -13,6 +14,7 @@ class ProfileSection extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    ProfileController profileController = Get.put(ProfileController());
     return SizedBox(
       child: SingleChildScrollView(
         child: Padding(
@@ -44,9 +46,13 @@ class ProfileSection extends StatelessWidget {
                       child: CustomTextWidget(text: "language change"),
                     ),
                     CustomSwitch(
-                      onTap: () {},
-                      onText: "",
-                      offText: "",
+                      onTap: () {
+                        profileController.languageBN.value
+                            ? Get.updateLocale(Locale('en', 'us'))
+                            : Get.updateLocale(Locale('bn', 'BD'));
+                      },
+                      onText: "EN",
+                      offText: "BN",
                     )
                   ],
                 ),
@@ -75,6 +81,10 @@ class ProfileSection extends StatelessWidget {
                   Get.back();
                 },
                 child: Container(
+                  margin:
+                      const EdgeInsets.symmetric(horizontal: 10, vertical: 7),
+                  padding:
+                      const EdgeInsets.symmetric(horizontal: 10, vertical: 5),
                   decoration: BoxDecoration(
                     color: Colors.grey,
                     borderRadius: BorderRadius.circular(10),
@@ -95,13 +105,18 @@ class ProfileSection extends StatelessWidget {
                   }
                 },
                 child: Container(
-                  margin: const EdgeInsets.symmetric(horizontal: 10,vertical: 7),
-                  padding: const EdgeInsets.symmetric(horizontal: 10,vertical: 5),
+                  margin:
+                      const EdgeInsets.symmetric(horizontal: 10, vertical: 7),
+                  padding:
+                      const EdgeInsets.symmetric(horizontal: 10, vertical: 5),
                   decoration: BoxDecoration(
                     borderRadius: BorderRadius.circular(5),
                     color: Colors.red,
                   ),
-                  child: const CustomTextWidget(text: "log_out",fontColor: Colors.white,),
+                  child: const CustomTextWidget(
+                    text: "log_out",
+                    fontColor: Colors.white,
+                  ),
                 ),
               )
             ],

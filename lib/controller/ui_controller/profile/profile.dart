@@ -20,6 +20,8 @@ class ProfileController extends GetxController {
   TextEditingController confPasswordController = TextEditingController();
   RxInt selectedTab = 0.obs;
   RxInt selectedOrderTab = 1.obs;
+  RxBool languageBN = true.obs;
+  RxBool themeLight =true.obs;
   RxBool isLoading = false.obs;
   RxMap<dynamic, dynamic> userInfo = {}.obs;
   ImageSource imageSource = ImageSource.camera;
