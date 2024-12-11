@@ -55,14 +55,37 @@ class ProfileSection extends StatelessWidget {
     );
   }
 
-  Future<dynamic> buildLogOutDialog(){
+  Future<dynamic> buildLogOutDialog() {
     return Get.defaultDialog(
-      title: "confirmation",
-      titleStyle: const TextStyle(fontSize: 20,fontFamily: "Robotoserif"),
-      content: const CustomTextWidget(text: "Do you went to log out?"),
-    );
+        title: "confirmation",
+        titleStyle: const TextStyle(fontSize: 20, fontFamily: "Robotoserif"),
+        content: const CustomTextWidget(
+          text: "Do you went to log out?",
+          fontSize: 16,
+        ),
+        actions: [
+          Row(
+            mainAxisAlignment: MainAxisAlignment.end,
+            children: [
+              InkWell(
+                onTap: () {
+                  Get.back();
+                },
+                child: Container(
+                  decoration: BoxDecoration(
+                    color: Colors.grey,
+                    borderRadius: BorderRadius.circular(10),
+                  ),
+                  child: CustomTextWidget(
+                    text: "cancel",
+                    fontColor: Colors.white,
+                  ),
+                ),
+              )
+            ],
+          )
+        ]);
   }
-
 
   SizedBox buildSizedBox({double? height, double? width}) => SizedBox(
         height: height,
