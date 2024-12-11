@@ -94,6 +94,15 @@ class ProfileSection extends StatelessWidget {
                     Get.offAll(() => const HomePage());
                   }
                 },
+                child: Container(
+                  margin: const EdgeInsets.symmetric(horizontal: 10,vertical: 7),
+                  padding: const EdgeInsets.symmetric(horizontal: 10,vertical: 5),
+                  decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(5),
+                    color: Colors.red,
+                  ),
+                  child: const CustomTextWidget(text: "log_out",fontColor: Colors.white,),
+                ),
               )
             ],
           )
