@@ -7,6 +7,7 @@ import 'package:myapp/view/common_widget/custom_text.dart';
 import 'package:myapp/view/screen/home/home_page.dart';
 import 'package:myapp/view/screen/profile/widget/change_password_section.dart';
 import 'package:myapp/view/screen/profile/widget/custom_switch.dart';
+import 'package:myapp/view/screen/profile/widget/log_out.dart';
 import 'package:myapp/view/screen/profile/widget/setting_list_tile.dart';
 
 class ProfileSection extends StatelessWidget {
@@ -63,7 +64,11 @@ class ProfileSection extends StatelessWidget {
                     )
                   ],
                 ),
-              )
+              ),
+              //logout
+              LogOut(onTap: (){
+                buildLogOutDialog();
+              })
             ],
           ),
         ),
