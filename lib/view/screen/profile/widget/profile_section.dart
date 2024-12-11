@@ -48,8 +48,15 @@ class ProfileSection extends StatelessWidget {
                     CustomSwitch(
                       onTap: () {
                         profileController.languageBN.value
-                            ? Get.updateLocale(Locale('en', 'us'))
-                            : Get.updateLocale(Locale('bn', 'BD'));
+                            ? Get.updateLocale(const Locale('en', 'us'))
+                            : Get.updateLocale(const Locale('bn', 'BD'));
+                        profileController.languageBN.value
+                            ? LocalData()
+                                .writeData(key: 'languageType', value: 'EN')
+                            : LocalData()
+                                .writeData(key: 'languageType', value: 'BN');
+                        profileController.languageBN.value =
+                            !profileController.languageBN.value;
                       },
                       onText: "EN",
                       offText: "BN",
