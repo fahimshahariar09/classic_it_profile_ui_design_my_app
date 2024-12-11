@@ -1,6 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:myapp/controller/api_controller/auth/log_out.dart';
+import 'package:myapp/controller/local_storage/local_storage.dart';
 import 'package:myapp/view/common_widget/custom_text.dart';
+import 'package:myapp/view/screen/home/home_page.dart';
 import 'package:myapp/view/screen/profile/widget/change_password_section.dart';
 import 'package:myapp/view/screen/profile/widget/custom_switch.dart';
 import 'package:myapp/view/screen/profile/widget/setting_list_tile.dart';
@@ -76,11 +79,21 @@ class ProfileSection extends StatelessWidget {
                     color: Colors.grey,
                     borderRadius: BorderRadius.circular(10),
                   ),
-                  child: CustomTextWidget(
+                  child: const CustomTextWidget(
                     text: "cancel",
                     fontColor: Colors.white,
                   ),
                 ),
+              ),
+              InkWell(
+                onTap: () async {
+                  var status = await LogOutService.logoutService();
+                  if (status) {
+                    await LocalData().deleteData(key: "userinfo");
+                    await LocalData().deleteData(key: "token");
+                    Get.offAll(() => const HomePage());
+                  }
+                },
               )
             ],
           )
