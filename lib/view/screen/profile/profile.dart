@@ -65,7 +65,7 @@ class ProfilePage extends StatelessWidget {
                               ),
                             ),
                           ),
-                          SizedBox(height: 10),
+                          const SizedBox(height: 10),
                           CustomTextWidget(
                               text:
                                   "${profileController.userInfo['name'] ?? "Please update your name"}",
@@ -77,7 +77,23 @@ class ProfilePage extends StatelessWidget {
                                   "${profileController.userInfo['email'] ?? "Empty E-mail"}",
                               fontColor: Colors.white,
                               fontWeight: FontWeight.w300,
-                              fontSize: 13)
+                              fontSize: 13),
+                          Row(
+                            mainAxisAlignment: MainAxisAlignment.center,
+                            children: [
+                              const CustomTextWidget(
+                                  text: "phone",
+                                  fontColor: Colors.white,
+                                  fontWeight: FontWeight.w300,
+                                  fontSize: 13),
+                              CustomTextWidget(
+                                  text:
+                                      "${profileController.userInfo['phone']}",
+                                  fontColor: Colors.white,
+                                  fontWeight: FontWeight.w300,
+                                  fontSize: 13)
+                            ],
+                          )
                         ],
                       ),
                     ),
