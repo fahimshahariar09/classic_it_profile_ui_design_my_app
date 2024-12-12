@@ -4,6 +4,7 @@ import 'package:myapp/controller/ui_controller/profile/profile.dart';
 import 'package:myapp/utlis/theme/app_color.dart';
 import 'package:myapp/view/common_widget/custom_text.dart';
 import 'package:myapp/view/common_widget/image_view_widget.dart';
+import 'package:myapp/view/screen/profile/widget/profile_edit_section.dart';
 
 class ProfilePage extends StatelessWidget {
   const ProfilePage({super.key});
@@ -93,10 +94,32 @@ class ProfilePage extends StatelessWidget {
                                   fontWeight: FontWeight.w300,
                                   fontSize: 13)
                             ],
-                          )
+                          ),
+                          CustomTextWidget(
+                              text:
+                                  "${profileController.userInfo['address'] ?? "Empty E-mail"}",
+                              fontWeight: FontWeight.w300,
+                              fontColor: Colors.white,
+                              fontSize: 13)
                         ],
                       ),
                     ),
+                    Positioned(
+                        top: 40,
+                        right: 10,
+                        child: IconButton(
+                            onPressed: () {
+                              showModalBottomSheet(
+                                  context: context,
+                                  builder: (builder) {
+                                    return const ProfileEditSection();
+                                  });
+                            },
+                            icon: const Icon(
+                              Icons.edit_note_sharp,
+                              size: 35,
+                              color: Colors.white,
+                            )))
                   ],
                 ))
           ],
