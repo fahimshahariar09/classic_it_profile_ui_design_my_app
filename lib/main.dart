@@ -19,7 +19,7 @@ class MyClass extends StatelessWidget {
       theme: AppTheme().lightTheme,
       translations: AppLanguage(),
       locale: const Locale("bn"),
-      home: Profile(),
+      home: ProfilePage(),
     );
   }
 }
