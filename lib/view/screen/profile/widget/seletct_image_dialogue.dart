@@ -1,5 +1,5 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:myapp/view/common_widget/custom_text.dart';
 
 class SeletctImageDialogue extends StatelessWidget {
   const SeletctImageDialogue({super.key});
@@ -10,7 +10,10 @@ class SeletctImageDialogue extends StatelessWidget {
       content: Column(
         mainAxisSize: MainAxisSize.min,
         children: [
-
+          CustomTextWidget(
+            text: "Select Image from",
+            fontSize: 20,
+          ),
         ],
       ),
     );
