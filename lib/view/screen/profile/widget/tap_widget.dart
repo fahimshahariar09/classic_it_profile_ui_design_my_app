@@ -1,10 +1,16 @@
 import 'package:flutter/material.dart';
 
 class TapWidget extends StatelessWidget {
-  const TapWidget({super.key});
+  const TapWidget({super.key, required this.onTap, this.value});
+
+  final VoidCallback onTap;
+  final dynamic value;
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold();
+    return GestureDetector(
+      onTap: onTap,
+      child: Card(),
+    );
   }
 }
