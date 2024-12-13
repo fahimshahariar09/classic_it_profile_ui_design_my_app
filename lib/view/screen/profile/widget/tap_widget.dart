@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:myapp/utlis/theme/app_color.dart';
+import 'package:myapp/view/common_widget/custom_text.dart';
 
 class TapWidget extends StatelessWidget {
   const TapWidget(
@@ -36,6 +37,15 @@ class TapWidget extends StatelessWidget {
                   ? const Icon(Icons.check_box_rounded,
                       size: 20, color: AppColors.bg1LightColor)
                   : const SizedBox(),
+              const SizedBox(width: 5),
+              Flexible(
+                  child: CustomTextWidget(
+                text: titel,
+                fontColor: value.value == selectedIndex
+                    ? AppColors.bg2LightColor
+                    : AppColors.bg1LightColor,
+                fontSize: value.value == selectedIndex ? 18 : 15,
+              ))
             ],
           ),
         ),
