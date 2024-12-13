@@ -22,6 +22,10 @@ class TapWidget extends StatelessWidget {
         color: value.value == selectedIndex
             ? AppColors.bgLightColor
             : AppColors.bg1LightColor,
+        margin: EdgeInsets.zero,
+        shape: OutlineInputBorder(
+            borderRadius: BorderRadius.circular(5),
+            borderSide: const BorderSide(color: Colors.transparent)),
       ),
     );
   }
