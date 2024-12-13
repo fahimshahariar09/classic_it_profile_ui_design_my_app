@@ -26,6 +26,19 @@ class TapWidget extends StatelessWidget {
         shape: OutlineInputBorder(
             borderRadius: BorderRadius.circular(5),
             borderSide: const BorderSide(color: Colors.transparent)),
+        child: SizedBox(
+          height: 400,
+          width: 30,
+          child: Row(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              value.value == selectedIndex
+                  ? const Icon(Icons.check_box_rounded,
+                      size: 20, color: AppColors.bg1LightColor)
+                  : const SizedBox(),
+            ],
+          ),
+        ),
       ),
     );
   }
